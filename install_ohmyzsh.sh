@@ -6,6 +6,7 @@ rm -rf ~/.fzf*
 rm -rf  ~/.zshrc*
 rm -f ~/.p10k.zsh
 rm -f ~/.shell.pre-oh-my-zsh
+rm -f ~/.cache/p10k*
 
 export ZSH_CUSTOM=~/.oh-my-zsh/custom
 #sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

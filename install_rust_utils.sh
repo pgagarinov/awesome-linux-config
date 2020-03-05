@@ -1,5 +1,10 @@
 #!/bin/sh
 set -e
+
+rm -rf ./.cargo
+rm -rf ./.config/broot
+rm -rf ./.config/pulse
+
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source $HOME/.cargo/env
 cargo install -j$(nproc) broot

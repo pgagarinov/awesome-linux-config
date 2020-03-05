@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-sudo yum install zsh
+sudo dnf install -y zsh
 sudo chsh -s $(which zsh) $USER
 echo '# default configuration'> ~/.zshrc
 echo '# default configuraiton'> ~/.zprofile
