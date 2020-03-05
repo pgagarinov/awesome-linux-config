@@ -2,7 +2,9 @@
 set -e
 grep -qxF 'set bell-style none' ~/.inputrc || echo 'set bell-style none'>> ~/.inputrc
 
-sudo yum install epel-release -y
-sudo yum install wget curl -y
-sudo yum install libzstd -y
-sudo yum install tig htop mc nano screen ncdu tigervnc-server -y
+sudo dnf update -y
+sudo dnf install epel-release -y
+sudo dnf update -y
+sudo dnf install wget curl -y
+sudo dnf install libzstd -y
+sudo dnf install tig htop mc nano screen ncdu tigervnc-server -y

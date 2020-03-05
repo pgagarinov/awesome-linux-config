@@ -10,6 +10,11 @@ printf "${GREEN}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${GREEN}Installing dev packages: done${NOCOLOR}\n\n"
 
+printf "${GREEN}Setting up XRDP...${NOCOLOR}\n"
+./install_xrdp.sh
+printf "${GREEN}Setting up XRDP: done${NOCOLOR}\n\n"
+
+
 printf "${GREEN}Installing zsh...${NOCOLOR}\n"
 ./install_zsh.sh
 printf "${GREEN}Installing zsh: done${NOCOLOR}\n\n"
