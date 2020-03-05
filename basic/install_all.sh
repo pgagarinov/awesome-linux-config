@@ -33,6 +33,9 @@ printf "${GREEN}Installing and setting up miniconda...${NOCOLOR}\n"
 ./install_miniconda.sh
 printf "${GREEN}Installing and setting up miniconda: done...${NOCOLOR}\n\n"
 
+printf "${GREEN}Configuring Jupyter...${NOCOLOR}\n"
+./config_jupyter.sh
+printf "${GREEN}Configuring Jupyter: done${NOCOLOR}\n\n"
 
 printf "${GREEN}Installing docker...${NOCOLOR}\n"
 ./install_docker.sh
