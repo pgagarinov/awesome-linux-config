@@ -1,2 +1,2 @@
 #!/bin/sh
-echo '%wheel        ALL=(ALL)       NOPASSWD: ALL' | sudo tee -a /etc/sudoers
+sudo sh -c "grep -qxF '%wheel        ALL=(ALL)       NOPASSWD: ALL' /etc/sudoers || echo '%wheel        ALL=(ALL)       NOPASSWD: ALL'>> /etc/sudoers"
