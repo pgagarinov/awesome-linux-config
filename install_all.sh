@@ -14,6 +14,12 @@ printf "${GREEN}Installing zsh...${NOCOLOR}\n"
 ./install_zsh.sh
 printf "${GREEN}Installing zsh: done${NOCOLOR}\n\n"
 
+
+printf "${GREEN}Installing AWS CLI...${NOCOLOR}\n"
+./install_aws.sh
+printf "${GREEN}Installing AWS CLI: done${NOCOLOR}\n\n"
+
+
 printf "${GREEN}Installing and setting up git...${NOCOLOR}\n"
 ./install_setup_git.sh
 printf "${GREEN}Installing and setting up git: done${NOCOLOR}\n\n"

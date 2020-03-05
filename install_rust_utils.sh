@@ -7,3 +7,9 @@ broot --install
 cargo install -j$(nproc) bandwhich
 cargo install -j$(nproc) fd-find
 cargo install -j$(nproc) du-dust
+
+
+grep -qxF 'source $HOME/.config/broot/launcher/bash/br' ~/.zshrc || echo 'source $HOME/.config/broot/launcher/bash/br'>> ~/.zshrc
+grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.zprofile || echo 'export PATH="$HOME/.cargo/bin:$PATH"'>> ~/.zprofile
+source ~/.zshrc
+source ~/.zprofile
