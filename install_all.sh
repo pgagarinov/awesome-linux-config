@@ -40,5 +40,5 @@ printf "${GREEN}Installing Rust cli utils: done${NOCOLOR}\n\n"
 
 
 printf "${GREEN}Installing and configuing OhMyZsh...${NOCOLOR}\n"
-#./install_ohmyzsh.sh
+./install_ohmyzsh.sh
 printf "${GREEN}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
