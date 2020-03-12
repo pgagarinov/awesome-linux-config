@@ -1,5 +1,5 @@
 #!/bin/sh
 set -e
-sudo dnf install xrdp 
+sudo dnf install xrdp -y 
 sudo systemctl enable xrdp --now
-sudo systemctl status xrdp
+sudo systemctl start xrdp
