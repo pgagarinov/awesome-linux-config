@@ -8,3 +8,4 @@ sudo dnf update -y
 sudo dnf install wget curl -y
 sudo dnf install libzstd -y
 sudo dnf install tig htop mc nano screen ncdu tigervnc-server -y
+sudo dnf install transmission -y

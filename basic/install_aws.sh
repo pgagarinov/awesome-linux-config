@@ -1,3 +1,5 @@
+#!/bin/sh
+set -e
 sudo alternatives --set python /usr/bin/python3
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
 unzip awscli-bundle.zip
@@ -9,5 +11,3 @@ grep -qxF 'export PATH=/usr/local/aws/bin:$PATH' ~/.zshrc || echo 'export PATH=/
 
 rm ./awscli-bundle.zip
 rm -rf ./awscli-bundle
-
-
