@@ -1,7 +1,7 @@
 #!/bin/zsh
 set -e
 setopt +o nomatch
-rm -rf /home/peter/.oh-my-zsh
+rm -rf ~/.oh-my-zsh
 rm -rf ~/.fzf*
 rm -rf  ~/.zshrc*
 rm -f ~/.p10k.zsh
