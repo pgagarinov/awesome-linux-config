@@ -12,6 +12,7 @@ broot --install
 #cargo install -j$(nproc) bandwhich
 cargo install -j$(nproc) fd-find
 cargo install -j$(nproc) du-dust
+cargo install -j$(nproc) bat
 
 
 grep -qxF 'source $HOME/.config/broot/launcher/bash/br' ~/.zshrc || echo 'source $HOME/.config/broot/launcher/bash/br'>> ~/.zshrc
