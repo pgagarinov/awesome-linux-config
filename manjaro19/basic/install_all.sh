@@ -54,3 +54,7 @@ printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
 printf "${MSGCOLOR}Installing and configuing OhMyZsh...${NOCOLOR}\n"
 ./install_ohmyzsh.sh
 printf "${MSGCOLOR}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Installing and configuing OhMyZsh...${NOCOLOR}\n"
+./install_powerlevel10k_fonts.sh
+printf "${MSGCOLOR}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
