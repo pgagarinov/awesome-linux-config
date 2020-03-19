@@ -9,3 +9,4 @@ set -e
 #     After installing FreeRDP open a terminal and run (on your server) the 
 # freerdp-shadow-cli 
 #    command with the user you want to use to log in remotely...
+sudo pacman -S --noconfirm remmina 

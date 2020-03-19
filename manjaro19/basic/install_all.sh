@@ -14,9 +14,9 @@ printf "${MSGCOLOR}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${MSGCOLOR}Installing dev packages: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Setting up XRDP...${NOCOLOR}\n"
-./install_rdp_server.sh
-printf "${MSGCOLOR}Setting up XRDP: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Setting up RDP...${NOCOLOR}\n"
+./install_rdp.sh
+printf "${MSGCOLOR}Setting up RDP: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Installing zsh...${NOCOLOR}\n"
