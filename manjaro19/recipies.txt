@@ -1,0 +1,74 @@
+# increase font size for Golden Dict
+
+
+nano ~/.goldendict/article-style.css
+
+
+body {
+   font-size: 22px;
+}
+
+
+
+
+
+# Make login screen resolution match the desktop resolution
+
+query curent dpi via
+
+xrdb -query | grep dpi
+
+in 
+/etc/sddm.conf
+
+make sure that in [X11] section the following string is specified
+
+ServerArguments=-nolisten tcp -dpi YOUR_DPI
+
+
+
+
+# update desktop shortcuts
+
+update-desktop-database ~/.local/share/applications
+
+
+#-------------------------------
+# how to disable bookmarks search
+
+mkdir -p ~/.local/share/kservices5
+sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
+    /usr/share/kservices5/plasma-runner-bookmarks.desktop \
+    > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
+
+https://askubuntu.com/questions/325810/disable-kde-launcher-browser-history-integration
+
+#--------------------
+# how to disable nvidia driver
+
+https://wiki.archlinux.org/index.php/Xiaomi_Mi_Notebook_Pro_15.6
+https://forum.manjaro.org/t/intel-620-integrated-graphics-tearing-flashing/80551
+1) Make sure linux-vide driver is installed
+2)
+ blacklist nouveuax and nvidia drivers:
+/etc/modprobe.d/nouveau.conf
+blacklist nouveau
+blacklist nvidia
+
+3)
+Install bbswitch to turn off the card
+/etc/modprobe.d/bbswitch.conf
+options bbswitch load_state=0 unload_state=0
+
+4) Use modesetting dirver (for newer GPUs intel's driver is integrated into the kernel)
+# content as /etc/X11/xorg.conf.d/20-intel.conf :
+for modesetting driver:
+
+#this is to use the modesetting driver
+#for the intel iGPU instead of the intel driver
+
+Section "Device"
+    Identifier "intel"
+    Driver "modesetting"
+    BusID "PCI:0:2:0"
+EndSection
