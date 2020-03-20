@@ -40,5 +40,14 @@ yay -S --noconfirm slack-desktop
 # Install Skyp
 yay -S --noconfirm skype
 
+# Install PyCharm professional (should be the latest)
+yay -S --noconfirm pycharm-professional
+
+# Cool file manager
+sudo pacman -S --noconfirm krusader
+
+# Cool Multi-window terminal
+sudo pacman -S --noconfirm terminator
+
 
 

@@ -72,3 +72,11 @@ Section "Device"
     Driver "modesetting"
     BusID "PCI:0:2:0"
 EndSection
+
+# add the following to ~/.bash_profile for fixing the problem with mouse cursor size after scaling a
+# system-wide KDE scaling factor to 2
+
+export GDK_SCALE=2
+export GDK_DPI_SCALE=0.5
+export PLASMA_USE_QT_SCALING=1
+
