@@ -49,5 +49,8 @@ sudo pacman -S --noconfirm krusader
 # Cool Multi-window terminal
 sudo pacman -S --noconfirm terminator
 
+# Matrix-like terminal-based screen-saver
+sudo pacman -S --noconfirm cmatrix 
+
 
 
