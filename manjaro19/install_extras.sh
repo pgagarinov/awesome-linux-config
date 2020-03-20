@@ -34,3 +34,11 @@ sudo pacman -S timeshift
 # Install goldendict
 sudo pacman -S goldendict
 
+# Install Slack for Desktop
+yay -S --noconfirm slack-desktop
+
+# Install Skyp
+yay -S --noconfirm skype
+
+
+
