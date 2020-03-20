@@ -52,5 +52,6 @@ sudo pacman -S --noconfirm terminator
 # Matrix-like terminal-based screen-saver
 sudo pacman -S --noconfirm cmatrix 
 
-
+# VSCode
+sudo pacman -S --noconfirm code
 
