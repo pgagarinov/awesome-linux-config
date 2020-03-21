@@ -60,3 +60,5 @@ flatpak install -y flathub org.libreoffice.LibreOffice
 yay -S --noconfirm ttf-ms-fonts
 yay -S --noconfirm ttf-vista-fonts
 
+# Install FileZilla
+sudo pacman -S --noconfirm filezilla
