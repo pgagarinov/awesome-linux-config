@@ -55,3 +55,8 @@ sudo pacman -S --noconfirm cmatrix
 # VSCode
 sudo pacman -S --noconfirm code
 
+# Libre Office and Microsoft fonts 
+flatpak install -y flathub org.libreoffice.LibreOffice
+yay -S --noconfirm ttf-ms-fonts
+yay -S --noconfirm ttf-vista-fonts
+
