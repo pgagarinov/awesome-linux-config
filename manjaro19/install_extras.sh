@@ -62,3 +62,5 @@ yay -S --noconfirm ttf-vista-fonts
 
 # Install FileZilla
 sudo pacman -S --noconfirm filezilla
+
+# Install GIMP image editor
