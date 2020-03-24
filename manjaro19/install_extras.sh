@@ -29,7 +29,10 @@ sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
     > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # Install timeshift for local backups
-sudo pacman -S timeshift
+sudo pacman -S --noconfirm timeshift
+
+# Bleachbit for cleaning the system
+sudo pacman -S --noconfrm bleachbit
 
 # Install goldendict
 sudo pacman -S goldendict
@@ -64,3 +67,4 @@ yay -S --noconfirm ttf-vista-fonts
 sudo pacman -S --noconfirm filezilla
 
 # Install GIMP image editor
+sudo pacman -S --noconfirm gimp
