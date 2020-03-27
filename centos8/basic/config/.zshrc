@@ -146,5 +146,6 @@ source $HOME/.config/broot/launcher/bash/br
 
 alias ll='ls -al'
 
-# for man pages to look nicer
-export PAGER=most
+# to fix the problem with colored-man-pages zsh plugin on Gnome and KDE
+export GROFF_NO_SGR=1 
+
