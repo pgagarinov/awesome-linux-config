@@ -10,6 +10,10 @@ printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\
 ./select_mirrors_and_update.sh
 printf "${MSGCOLOR}Selecting fastest mirrors and updating packages: done${NOCOLOR}\n"
 
+printf "${MSGCOLOR}Enabling AURs...${NOCOLOR}\n"
+./enable_aurs.sh
+printf "${MSGCOLOR}Enabling AURs: done${NOCOLOR}\n"
+
 printf "${MSGCOLOR}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${MSGCOLOR}Installing dev packages: done${NOCOLOR}\n\n"

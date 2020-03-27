@@ -1,9 +1,3 @@
-#enable AUR in pamac
-sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
-
-# Install yay installer
-sudo pacman -S --noconfirm yay
-
 # Install Vivaldi browser
 yay -Sy --noconfirm vivaldi
 sudo /opt/vivaldi/update-ffmpeg
