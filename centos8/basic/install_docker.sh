@@ -8,3 +8,5 @@ sudo systemctl disable firewalld
 sudo systemctl stop firewalld
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
+
+

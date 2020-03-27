@@ -99,7 +99,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 #plugins=(git zsh-autosuggestions python zsh-syntax-highlighting aws fzf zsh-completions)
-plugins=(git python zsh-syntax-highlighting aws zsh-completions fzf-tab zsh-autosuggestions gitfast)
+plugins=(git python zsh-syntax-highlighting aws zsh-completions fzf-tab zsh-autosuggestions gitfast colored-man-pages)
 #source $HOME/.oh-my-zsh/custom/plugins/fzf-tab-completion/zsh/fzf-zsh-completion.sh
 # only aws command completion
 #zstyle ':completion:*:*:aws' fzf-search-display true
