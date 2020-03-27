@@ -145,3 +145,6 @@ source $HOME/.config/broot/launcher/bash/br
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias ll='ls -al'
+
+# for man pages to look nicer
+export PAGER=most
