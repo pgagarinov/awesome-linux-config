@@ -23,6 +23,11 @@ printf "${MSGCOLOR}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${MSGCOLOR}Installing dev packages: done${NOCOLOR}\n\n"
 
+printf "${MSGCOLOR}Installing NodeJS...${NOCOLOR}\n"
+./install_nodejs.sh
+printf "${MSGCOLOR}Installing NodeJS: done${NOCOLOR}\n\n"
+
+
 printf "${MSGCOLOR}Setting up RDP...${NOCOLOR}\n"
 ./install_rdp.sh
 printf "${MSGCOLOR}Setting up RDP: done${NOCOLOR}\n\n"

@@ -1,3 +1,12 @@
+#enable AUR in pamac
+sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
+
+# Install yay installer
+sudo pacman -S --noconfirm yay
+
+# Install Grub Customizer
+sudo pacman -S --noconfirm grub-customizer
+
 # Install Vivaldi browser
 yay -Sy --noconfirm vivaldi
 sudo /opt/vivaldi/update-ffmpeg
@@ -35,7 +44,8 @@ sudo pacman -S goldendict
 yay -S --noconfirm slack-desktop
 
 # Install Skyp
-yay -S --noconfirm skype
+#yay -S --noconfirm skype
+yay -S --noconfirm skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
 yay -S --noconfirm pycharm-professional
