@@ -6,6 +6,7 @@ rm -rf ./.config/broot
 rm -rf ./.config/pulse
 
 sudo dnf group install "Development Tools" -y
+sudo dnf install clang llvm -y
 
 curl https://sh.rustup.rs -sSf | sh -s -- -y
 source $HOME/.cargo/env
