@@ -15,6 +15,7 @@ sudo dnf install libzstd -y
 sudo dnf install tig htop mc nano screen ncdu tigervnc-server -y
 sudo dnf install transmission telnet -y
 sudo dnf install python3 python2 -y
+sudo dnf install java-1.8.0-openjdk-devel maven
 sudo alternatives --set python /usr/bin/python3
 
 #
