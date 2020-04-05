@@ -7,6 +7,10 @@ sudo pacman -S --noconfirm yay
 # Install Grub Customizer
 sudo pacman -S --noconfirm grub-customizer
 
+# Install wavemon
+sudo pacman -S --noconfirm wavemon
+
+
 # Install Vivaldi browser
 yay -Sy --noconfirm vivaldi
 sudo /opt/vivaldi/update-ffmpeg
