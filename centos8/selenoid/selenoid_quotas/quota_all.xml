@@ -3,7 +3,7 @@
     <version number="75.0">
         <region name="GRID">
             <host name="192.168.2.144" port="4444" count="24"/>
-            <host name="192.168.2.102" port="4445" count="24"/>
+            <host name="192.168.2.97" port="4445" count="24"/>
         </region>
     </version>
 </browser>
