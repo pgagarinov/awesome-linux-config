@@ -13,6 +13,8 @@ docker stop ggr-ui||true&&docker rm ggr-ui||true
 ./cm selenoid-ui cleanup
 
 ./cm selenoid start --browsers "chrome:75" --last-versions 2 --tmpfs 512 --vnc --port 4445 --args "-limit 24"
-docker run -d --name ggr -p 4444:4444 -v ${SCRIPT_DIR}/selenoid_quotas:/etc/grid-router/quota:ro aerokube/ggr:latest-release
-docker run -d --name ggr-ui -p 8888:8888 -v ${SCRIPT_DIR}/selenoid_quotas:/etc/grid-router/quota:ro aerokube/ggr-ui:latest-release
+docker run -d --name ggr -p 4444:4444 -v ${SCRIPT_DIR}/ggr_data:/etc/grid-router/:ro aerokube/ggr:latest-release
+docker run -d --name ggr-ui -p 8888:8888 -v ${SCRIPT_DIR}/ggr_data:/etc/grid-router/:ro aerokube/ggr-ui:latest-release
 ./cm selenoid-ui start --args "--period 1000ms --selenoid-uri=http://${LOCAL_IP}:8888" --port 8080
+docker logs ggr
+curl http://$LOCAL_IP:4444/wd/hub/status
