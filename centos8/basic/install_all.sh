@@ -10,6 +10,11 @@ printf "${GREEN}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${GREEN}Installing dev packages: done${NOCOLOR}\n\n"
 
+printf "${GREEN}Configuring chronyd ntp demon...${NOCOLOR}\n"
+./configure_chronyd.sh
+printf "${GREEN}Configuring chronyd ntp demon: done${NOCOLOR}\n\n"
+
+
 printf "${GREEN}Setting up XRDP...${NOCOLOR}\n"
 ./install_xrdp.sh
 printf "${GREEN}Setting up XRDP: done${NOCOLOR}\n\n"
