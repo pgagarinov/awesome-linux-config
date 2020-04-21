@@ -64,6 +64,10 @@ update-initramfs -u -k all
 #   To use a physical monitor add "x-vga=on": hostpci0: 03:00,pcie=1, x-vga=on
 # 
 # machine: q35,kernel_irqchip=on
+# Proxmox 6 doesn't seem to access this format so it is recommended to specify kernel_irqchip=on
+#  as 
+# qm set 110 -args '-machine type=q35,kernel_irqchip=on'
+
 #
 # mind https://forum.proxmox.com/threads/fix-for-pci-passthrough-and-issues-with-proxmox-6-gui-regex-that-needs-resolving-after-upgrade.56507/
 
