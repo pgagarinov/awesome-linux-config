@@ -18,11 +18,11 @@
 # 5. Get list of IDs via `lspci -vnn |grep -iP 'nvidia|vfio-pci|gpu'
 
 # 6. Update packages
-sed -i "s/deb/#deb/" /etc/apt/sources.list.d/pve-enterprise.list
-grep -q "pve-no-subscription" /etc/apt/sources.list|| echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" >> /etc/apt/sources.list
-apt update
-apt full-upgrade -y
-pveam update
+#sed -i "s/deb/#deb/" /etc/apt/sources.list.d/pve-enterprise.list
+#grep -q "pve-no-subscription" /etc/apt/sources.list|| echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" >> /etc/apt/sources.list
+#apt update
+#apt full-upgrade -y
+#pveam update
 
 # 7. Loading vfio-pci early
 echo "vfio" >> /etc/modules
@@ -41,7 +41,9 @@ pve-efiboot-tool refresh
 echo "options kvm ignore_msrs=1" >> /etc/modprobe.d/kvm.conf
 
 # 10. Binding vfio-pci via device ID
-echo "options vfio-pci ids=10de:1b81,10de:10f0 disable_vga=1" >> /etc/modprobe.d/vfio.conf
+#   Please make sure to replace IDs given here as an example with actual GPU function IDs
+#   Extracted via lspci    
+echo "options vfio-pci ids=10de:1f02,10de:10f9,10de:1ada,10de:1adb  disable_vga=1" >> /etc/modprobe.d/vfio.conf
 
 
 # 11. Blacklist GPU drivers on host
@@ -58,9 +60,34 @@ update-initramfs -u -k all
 # agent: 1
 # bios: ovmf
 #   
-# hostpci0: 0a:00,pcie=1
-#   To use a physical monitor add "x-vga=on": hostpci0: 0a:00,pcie=1, x-vga=on
+# hostpci0: 03:00,pcie=1
+#   To use a physical monitor add "x-vga=on": hostpci0: 03:00,pcie=1, x-vga=on
 # 
 # machine: q35,kernel_irqchip=on
+#
+# mind https://forum.proxmox.com/threads/fix-for-pci-passthrough-and-issues-with-proxmox-6-gui-regex-that-needs-resolving-after-upgrade.56507/
 
 # 14. reboot Proxmox host
+
+#---------REFERENCES----------
+#https://pve.proxmox.com/wiki/Pci_passthrough
+#https://pve.proxmox.com/wiki/PCI(e)_Passthrough
+#https://forum.proxmox.com/threads/fix-for-pci-passthrough-and-issues-with-proxmox-6-gui-regex-that-needs-resolving-after-upgrade.56507/
+#https://forum.proxmox.com/threads/gpu-passthrough-tutorial-reference.34303/
+#https://forum.proxmox.com/threads/bug-gpu-passthrough-not-working-on-vmlinuz-5-3-10-1-pve-v-6-1.61356/
+#https://gist.github.com/MakiseKurisu/21b08e5f6537a5b0a08a34c2382dd244
+#https://techblog.jeppson.org/2019/10/proxmox-6-nvidia-gpu-passthrough-fix/
+#https://forum.proxmox.com/threads/vm-w-pcie-passthrough-not-working-after-upgrading-to-6-0.56021/
+#https://www.youtube.com/watch?v=3yhwJxWSqXI&t=319s
+#https://www.reddit.com/r/homelab/comments/b5xpua/the_ultimate_beginners_guide_to_gpu_passthrough/
+#https://www.reddit.com/r/Proxmox/comments/cklaz4/cant_get_iommu_going_for_pcie_passthrough/
+#https://forum.proxmox.com/threads/2-problems-backup-hangs-and-start-failed-got-timeout.61860/
+#https://forum.level1techs.com/t/getting-dreaded-error-code-43-when-trying-to-passthrough-an-nvidia-gpu-to-a-windows-virtual-machine-using-qemu-kvm-in-proxmox/122405/29
+#https://forum.level1techs.com/t/proxmox-vm-wont-start-if-pci-passthrough-is-enabled-with-more-than-96gb-memory/151888/20
+#https://forum.manjaro.org/t/stuck-at-started-tlp-system-startup-shutdown/29894/21
+#https://forum.odroid.com/viewtopic.php?t=35608
+#https://www.reddit.com/r/VFIO/comments/fyg1gw/rtx2070_has_a_usb_and_serial_bus_controller_i/
+#https://askubuntu.com/questions/1155263/new-install-desktop-ubuntu-19-04-shows-error-message-ucsi-ccg-0-0008-failed-to
+#https://forum.manjaro.org/t/kvm-with-libvirt-manjaro-iso-boot-stuck-at-tlp/118105/6
+#https://forum.manjaro.org/t/qemu-kvm-install-media-fails-to-boot-with-uefi-firmware/14354
+
