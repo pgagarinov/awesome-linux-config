@@ -13,7 +13,15 @@ then
 fi
 sudo systemctl enable --now docker
 sudo usermod -aG docker $USER
-newgrp docker
-docker run hello-world
+#/usr/bin/newgrp docker <<EONG
+#docker run hello-world
+#EONG
 
+# first become another group, this is the same as 'newgrp docker' but inside the same shell
+group=docker
+if [ $(id -gn) != $group ]; then
+  exec sg $group "$0 $*"
+fi
+# then run 'hello-world' from under docker group (just to make sure docker is installed correctly)
+docker run hello-world
 

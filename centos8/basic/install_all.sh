@@ -11,7 +11,7 @@ printf "${GREEN}Installing dev packages...${NOCOLOR}\n"
 printf "${GREEN}Installing dev packages: done${NOCOLOR}\n\n"
 
 printf "${GREEN}Configuring chronyd ntp demon...${NOCOLOR}\n"
-./configure_chronyd.sh
+./config_chronyd.sh
 printf "${GREEN}Configuring chronyd ntp demon: done${NOCOLOR}\n\n"
 
 
