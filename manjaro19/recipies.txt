@@ -55,14 +55,23 @@ https://forum.manjaro.org/t/intel-620-integrated-graphics-tearing-flashing/80551
 blacklist nouveau
 blacklist nvidia
 
+do not forget to run
+	mkinitcpio -p linux
+
+to rebuild initramfs image
+
+
+
 3)
-Install bbswitch to turn off the card
+Install bbswitch to turn off the discrete card (NVidia)
 /etc/modprobe.d/bbswitch.conf
 options bbswitch load_state=0 unload_state=0
 
 4) Use modesetting dirver (for newer GPUs intel's driver is integrated into the kernel)
 # content as /etc/X11/xorg.conf.d/20-intel.conf :
 for modesetting driver:
+
+# THIS STEP ALSO SOLVED THE PROBLEM WITH TEARING!!
 
 #this is to use the modesetting driver
 #for the intel iGPU instead of the intel driver
@@ -79,4 +88,10 @@ EndSection
 export GDK_SCALE=2
 export GDK_DPI_SCALE=0.5
 export PLASMA_USE_QT_SCALING=1
+
+# Modify the launch string for Viber shortcat like this:
+/usr/bin/flatpak run --branch=stable --arch=x86_64  --command=viber --env=QT_SCALE_FACTOR=1.5 com.viber.Viber
+
+# to fix the probel with scaling (required when display scaling in KDE is set to 1.5)
+# see https://github.com/flatpak/flatpak/issues/1283
 
