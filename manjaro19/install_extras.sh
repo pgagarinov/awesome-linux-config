@@ -76,3 +76,14 @@ sudo pacman -S --noconfirm filezilla
 
 # Install GIMP image editor
 sudo pacman -S --noconfirm gimp
+
+# Virt viewer is SPICE client
+# https://www.spice-space.org/spice-user-manual.html#spice-client
+sudo pacman -S --noconfirm virt-viewer
+
+# Virt manager is UI app for managing KVM VMs
+# https://wiki.manjaro.org/index.php?title=Virt-manager
+sudo pacman -S --noconfirm virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo systemctl enable libvirtd.service
+sudo systemctl start libvirtd.service
+
