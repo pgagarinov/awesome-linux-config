@@ -95,3 +95,7 @@ export PLASMA_USE_QT_SCALING=1
 # to fix the probel with scaling (required when display scaling in KDE is set to 1.5)
 # see https://github.com/flatpak/flatpak/issues/1283
 
+# Modify the app launch string for Zoom like this
+bash -c "QT_SCALE_FACTOR=1.5 /usr/bin/zoom %U"
+to fix the problem with Zoom scaling when KDE display scaling is set to 1.5
+
