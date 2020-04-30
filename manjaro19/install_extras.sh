@@ -87,6 +87,5 @@ sudo pacman -S --noconfirm virt-manager qemu vde2 ebtables dnsmasq bridge-utils 
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
-# Keepass password manager
-sudo pacman -S --noconfirm keepass
-yay -S --noconfirm keepass-plugin-http
+# KeePassXC password manager
+sudo pacman -S --noconfirm keepassxc
