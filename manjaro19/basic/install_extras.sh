@@ -74,13 +74,16 @@ sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
-flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+#flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+yay -S --noconfirm intellij-idea-ultimate-edition
 
 #Install DataGrip
-flatpak install -y flathub com.jetbrains.DataGrip
+#flatpak install -y flathub com.jetbrains.DataGrip
+yay -S --noconfirm datagrip
 
 #Install EasySSH
-flatpak install -y flathub com.github.muriloventuroso.easyssh
+#flatpak install -y flathub com.github.muriloventuroso.easyssh
+yay -S --noconfirm easyssh
 
 #Install Google Chrome
 yay -S --noconfirm google-chrome
