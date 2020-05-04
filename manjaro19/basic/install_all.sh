@@ -3,9 +3,9 @@ set -e
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
 
-if [-z command -v snap]
+if ! [-x "$(command -v snap)"];
 then
-printf "Canonical stuff allready removed"
+printf "${MSGCOLOR}Canonical stuff allready removed${NOCOLOR}\n"
 else
 printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 ./remove_canonical_stuff.sh
