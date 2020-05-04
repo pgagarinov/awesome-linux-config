@@ -3,9 +3,10 @@ set -e
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
 
-printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
-./remove_canonical_stuff.sh
-printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
+#printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
+#./remove_canonical_stuff.sh
+#printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
+
 
 printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
 ./select_mirrors_and_update.sh
@@ -56,9 +57,9 @@ printf "${MSGCOLOR}Installing docker...${NOCOLOR}\n"
 printf "${MSGCOLOR}Installing docker: done${NOCOLOR}\n\n"
 
 
-printf "${MSGCOLOR}Installing Rust cli utils...${NOCOLOR}\n"
-./install_rust_utils.sh
-printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
+#printf "${MSGCOLOR}Installing Rust cli utils...${NOCOLOR}\n"
+#./install_rust_utils.sh
+#printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
 
 
 printf "${MSGCOLOR}Installing and configuring OhMyZsh...${NOCOLOR}\n"
