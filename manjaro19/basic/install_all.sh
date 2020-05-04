@@ -2,6 +2,9 @@
 set -e
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
+printf "${MSGCOLOR}Enabling sudo without password prompt...${NOCOLOR}\n"	
+./sudo_nopasswd.sh	
+printf "${MSGCOLOR}Enabling sudo without password prompt: done${NOCOLOR}\n\n"
 
 if ! [-x "$(command -v snap)"];
 then
