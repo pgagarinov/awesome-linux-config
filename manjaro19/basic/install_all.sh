@@ -2,14 +2,10 @@
 set -e
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
-printf "${MSGCOLOR}Enabling sudo without password prompt...${NOCOLOR}\n"
-./sudo_nopasswd.sh
-printf "${MSGCOLOR}Enabling sudo without password prompt: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 ./remove_canonical_stuff.sh
 printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
-
 
 printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
 ./select_mirrors_and_update.sh
