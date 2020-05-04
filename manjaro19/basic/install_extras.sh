@@ -10,6 +10,9 @@ sudo pacman -S --noconfirm yay
 #Updating yay packages
 yay -Syu
 
+# Install Brave Browser
+sudo pacman -S --noconfirm brave
+
 # Install Zoom
 yay -Sy --noconfirm zoom 
 
