@@ -6,14 +6,9 @@ printf "${MSGCOLOR}Enabling sudo without password prompt...${NOCOLOR}\n"
 ./sudo_nopasswd.sh	
 printf "${MSGCOLOR}Enabling sudo without password prompt: done${NOCOLOR}\n\n"
 
-if ! [-x "$(command -v snap)"];
-then
-printf "${MSGCOLOR}Canonical stuff allready removed${NOCOLOR}\n"
-else
 printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 ./remove_canonical_stuff.sh
 printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
-fi
 
 printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
 ./select_mirrors_and_update.sh
@@ -31,6 +26,9 @@ printf "${MSGCOLOR}Installing NodeJS...${NOCOLOR}\n"
 ./install_nodejs.sh
 printf "${MSGCOLOR}Installing NodeJS: done${NOCOLOR}\n\n"
 
+printf "${MSGCOLOR}Installing JDK8 and Maven...${NOCOLOR}\n"
+./install_jdk8_maven.sh
+printf "${MSGCOLOR}Installing JDK8 and Maven: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Setting up RDP...${NOCOLOR}\n"
 ./install_rdp.sh
