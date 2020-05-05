@@ -1,0 +1,11 @@
+#!/bin/sh
+
+printf 'Downloading ESET NOD32 Antivirus for Linux Desktop...\n' 
+wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_en.linux
+
+printf 'Changing installer permissions...'
+sudo chmod +x eset_nod32av_64bit_en.linux
+
+
+
+
