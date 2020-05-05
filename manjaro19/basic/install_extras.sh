@@ -8,13 +8,13 @@ pacman -Syyu
 sudo pacman -S --noconfirm yay
 
 #Updating yay packages
-yay -Syu
+su - $1 -c "yay -Syu"
 
 # Install Brave Browser
 sudo pacman -S --noconfirm brave
 
 # Install Zoom
-yay -Sy --noconfirm zoom 
+su - $1 -c "yay -Sy --noconfirm zoom" 
 
 # Install Viber only for a current user
 flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -37,17 +37,18 @@ sudo pacman -S --noconfirm timeshift
 sudo pacman -S --noconfrm bleachbit
 
 # Install Slack for Desktop
-yay -S --noconfirm slack-desktop
+su - $1 -c "yay -S --noconfirm slack-desktop"
 
 # Install FileZilla
 sudo pacman -S --noconfirm filezilla
 
 # Install Skype
 #yay -S --noconfirm skype
-yay -S --noconfirm skypeforlinux-stable-bin
+su - $1 -c "yay -S --noconfirm skypeforlinux-stable-bin"
 
 # Install PyCharm professional (should be the latest)
-yay -S --noconfirm pycharm-professional
+#yay -S --noconfirm pycharm-professional
+sudo flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
 sudo pacman -S --noconfirm krusader
@@ -59,9 +60,9 @@ sudo pacman -S --noconfirm terminator
 sudo pacman -S --noconfirm code
 
 # Libre Office and Microsoft fonts 
-sudo flatpak install -y flathub org.libreoffice.LibreOffice
-yay -S --noconfirm ttf-ms-fonts
-yay -S --noconfirm ttf-vista-fonts
+sudo flatpak install -y --user flathub org.libreoffice.LibreOffice
+su - $1 -c "yay -S --noconfirm ttf-ms-fonts"
+su - $1 -c "yay -S --noconfirm ttf-vista-fonts"
 
 # Install GIMP image editor
 #sudo pacman -S --noconfirm gimp
@@ -77,22 +78,22 @@ sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
-#flatpak install -y flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-yay -S --noconfirm intellij-idea-ultimate-edition
+flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+#yay -S --noconfirm intellij-idea-ultimate-edition
 
 #Install DataGrip
-#flatpak install -y flathub com.jetbrains.DataGrip
-yay -S --noconfirm datagrip
+flatpak install -y --user flathub com.jetbrains.DataGrip
+#yay -S --noconfirm datagrip
 
 #Install EasySSH
-#flatpak install -y flathub com.github.muriloventuroso.easyssh
-yay -S --noconfirm easyssh
+flatpak install -y --user flathub com.github.muriloventuroso.easyssh
+#yay -S --noconfirm easyssh
 
 #Install Google Chrome
-yay -S --noconfirm google-chrome
+su - $1 -c "yay -S --noconfirm google-chrome"
 
 #Install Chrome Driver for testing
-yay -S --noconfirm chromedriver
+su - $1 -c "yay -S --noconfirm chromedriver"
 
 #Install Firefox driver 
-yay -S --noconfirm geckodriver-hg
+su - $1 -c "yay -S --noconfirm geckodriver-hg"
