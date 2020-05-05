@@ -8,13 +8,13 @@ pacman -Syyu
 sudo pacman -S --noconfirm yay
 
 #Updating yay packages
-su - $1 -c "yay -Syu"
+yay -Syu
 
 # Install Brave Browser
 sudo pacman -S --noconfirm brave
 
 # Install Zoom
-su - $1 -c "yay -Sy --noconfirm zoom" 
+yay -Sy --noconfirm zoom 
 
 # Install Viber only for a current user
 flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -37,18 +37,18 @@ sudo pacman -S --noconfirm timeshift
 sudo pacman -S --noconfrm bleachbit
 
 # Install Slack for Desktop
-su - $1 -c "yay -S --noconfirm slack-desktop"
+yay -S --noconfirm slack-desktop
 
 # Install FileZilla
 sudo pacman -S --noconfirm filezilla
 
 # Install Skype
 #yay -S --noconfirm skype
-su - $1 -c "yay -S --noconfirm skypeforlinux-stable-bin"
+yay -S --noconfirm skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
 #yay -S --noconfirm pycharm-professional
-sudo flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
+flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
 sudo pacman -S --noconfirm krusader
@@ -60,9 +60,9 @@ sudo pacman -S --noconfirm terminator
 sudo pacman -S --noconfirm code
 
 # Libre Office and Microsoft fonts 
-sudo flatpak install -y --user flathub org.libreoffice.LibreOffice
-su - $1 -c "yay -S --noconfirm ttf-ms-fonts"
-su - $1 -c "yay -S --noconfirm ttf-vista-fonts"
+flatpak install -y --user flathub org.libreoffice.LibreOffice
+yay -S --noconfirm ttf-ms-fonts
+yay -S --noconfirm ttf-vista-fonts
 
 # Install GIMP image editor
 #sudo pacman -S --noconfirm gimp
@@ -90,10 +90,10 @@ flatpak install -y --user flathub com.github.muriloventuroso.easyssh
 #yay -S --noconfirm easyssh
 
 #Install Google Chrome
-su - $1 -c "yay -S --noconfirm google-chrome"
+yay -S --noconfirm google-chrome
 
 #Install Chrome Driver for testing
-su - $1 -c "yay -S --noconfirm chromedriver"
+yay -S --noconfirm chromedriver
 
 #Install Firefox driver 
-su - $1 -c "yay -S --noconfirm geckodriver-hg"
+yay -S --noconfirm geckodriver-hg

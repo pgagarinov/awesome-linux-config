@@ -2,9 +2,6 @@
 set -e
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
-printf "${MSGCOLOR}POlease provide the username under witch will be installed the software via yay.\nUsername:${NOCOLOR}\n"
-read username
-
 printf "${MSGCOLOR}Enabling sudo without password prompt...${NOCOLOR}\n"	
 ./sudo_nopasswd.sh	
 printf "${MSGCOLOR}Enabling sudo without password prompt: done${NOCOLOR}\n\n"
@@ -79,5 +76,5 @@ printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n
 printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing and configuring extras...${NOCOLOR}\n"
-./install_extras.sh $username
+./install_extras.sh
 printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
