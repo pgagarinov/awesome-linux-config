@@ -80,6 +80,7 @@ sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
 #flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+yay -S --noconfirm webstorm-jre
 yay -S --noconfirm intellij-idea-ultimate-edition
 
 #Install DataGrip
