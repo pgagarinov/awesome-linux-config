@@ -20,5 +20,5 @@ sudo alternatives --set python /usr/bin/python3
 
 #
 # for man pages to look nicer
-# this package is not yet available in CentOS 8 but can be installed on CentOS via yum
+# this package is not yet available in CentOS 8 but can be installed on CentOS 7 via yum
 # sudo dnf install most -y
