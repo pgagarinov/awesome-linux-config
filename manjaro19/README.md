@@ -30,6 +30,7 @@ There is an antivirus install script that is not included in **install_all.sh**
 * To execute the **install_eset_nod32.sh** run:
 
 	```bash
+        cd centos-config/manjaro19
 	./install_eset_nod32.sh
 	```
 	
