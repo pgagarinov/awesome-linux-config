@@ -80,7 +80,7 @@ sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
 #flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-yay -S --noconfirm webstorm-jre
+yay -S --noconfirm webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
 yay -S --noconfirm intellij-idea-ultimate-edition
 
 #Install DataGrip
