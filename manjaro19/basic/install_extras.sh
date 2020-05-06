@@ -47,8 +47,9 @@ sudo pacman -S --noconfirm filezilla
 yay -S --noconfirm skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
-#yay -S --noconfirm pycharm-professional
-flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
+sudo pacman -S --noconfirm xdg-utils
+yay -S --noconfirm pycharm-professional
+#flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
 sudo pacman -S --noconfirm krusader
@@ -78,8 +79,8 @@ sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
-flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-#yay -S --noconfirm intellij-idea-ultimate-edition
+#flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+yay -S --noconfirm intellij-idea-ultimate-edition
 
 #Install DataGrip
 flatpak install -y --user flathub com.jetbrains.DataGrip
