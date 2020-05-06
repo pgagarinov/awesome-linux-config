@@ -1,4 +1,5 @@
 #!/bin/sh
+set -e
 
 printf 'Downloading ESET NOD32 Antivirus for Linux Desktop...\n' 
 wget https://download.eset.com/com/eset/apps/home/eav/linux/latest/eset_nod32av_64bit_en.linux
