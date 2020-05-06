@@ -1,19 +1,14 @@
 #enable AUR in pamac
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
 
+#Update system via Pacman
+pacman -Syyu
+
 # Install yay installer
 sudo pacman -S --noconfirm yay
 
-# Install Grub Customizer
-sudo pacman -S --noconfirm grub-customizer
-
-# Install wavemon
-sudo pacman -S --noconfirm wavemon
-
-
-# Install Vivaldi browser
-yay -Sy --noconfirm vivaldi
-sudo /opt/vivaldi/update-ffmpeg
+#Updating yay packages
+yay -Syu
 
 # Install Brave Browser
 sudo pacman -S --noconfirm brave
@@ -41,18 +36,20 @@ sudo pacman -S --noconfirm timeshift
 # Bleachbit for cleaning the system
 sudo pacman -S --noconfrm bleachbit
 
-# Install goldendict
-sudo pacman -S goldendict
-
 # Install Slack for Desktop
 yay -S --noconfirm slack-desktop
 
-# Install Skyp
+# Install FileZilla
+sudo pacman -S --noconfirm filezilla
+
+# Install Skype
 #yay -S --noconfirm skype
 yay -S --noconfirm skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
+sudo pacman -S --noconfirm xdg-utils
 yay -S --noconfirm pycharm-professional
+#flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
 sudo pacman -S --noconfirm krusader
@@ -60,26 +57,20 @@ sudo pacman -S --noconfirm krusader
 # Cool Multi-window terminal
 sudo pacman -S --noconfirm terminator
 
-# Matrix-like terminal-based screen-saver
-sudo pacman -S --noconfirm cmatrix 
-
 # VSCode
 sudo pacman -S --noconfirm code
 
 # Libre Office and Microsoft fonts 
-flatpak install -y flathub org.libreoffice.LibreOffice
+flatpak install -y --user flathub org.libreoffice.LibreOffice
 yay -S --noconfirm ttf-ms-fonts
 yay -S --noconfirm ttf-vista-fonts
 
-# Install FileZilla
-sudo pacman -S --noconfirm filezilla
-
 # Install GIMP image editor
-sudo pacman -S --noconfirm gimp
+#sudo pacman -S --noconfirm gimp
 
 # Virt viewer is SPICE client
 # https://www.spice-space.org/spice-user-manual.html#spice-client
-sudo pacman -S --noconfirm virt-viewer
+#sudo pacman -S --noconfirm virt-viewer
 
 # Virt manager is UI app for managing KVM VMs
 # https://wiki.manjaro.org/index.php?title=Virt-manager
@@ -87,5 +78,25 @@ sudo pacman -S --noconfirm virt-manager qemu vde2 ebtables dnsmasq bridge-utils 
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
-# KeePassXC password manager
-sudo pacman -S --noconfirm keepassxc
+#Install Intellij Ultimate
+#flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
+yay -S --noconfirm webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
+yay -S --noconfirm intellij-idea-ultimate-edition
+
+#Install DataGrip
+flatpak install -y --user flathub com.jetbrains.DataGrip
+#yay -S --noconfirm datagrip
+
+#Install EasySSH
+flatpak install -y --user flathub com.github.muriloventuroso.easyssh
+#yay -S --noconfirm easyssh
+
+#Install Google Chrome
+yay -S --noconfirm google-chrome
+
+#Install Chrome Driver for testing
+yay -S --noconfirm chromedriver
+
+#Install Firefox driver 
+#yay -S --noconfirm geckodriver-hg
+sudo pacman -S --noconfirm geckodriver
