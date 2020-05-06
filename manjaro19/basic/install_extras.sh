@@ -98,4 +98,5 @@ yay -S --noconfirm google-chrome
 yay -S --noconfirm chromedriver
 
 #Install Firefox driver 
-yay -S --noconfirm geckodriver-hg
+#yay -S --noconfirm geckodriver-hg
+sudo pacman -S --noconfirm geckodriver
