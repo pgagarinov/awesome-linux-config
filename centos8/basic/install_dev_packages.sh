@@ -9,7 +9,7 @@ sudo dnf update -y
 sudo dnf group install "Development Tools" -y
 #
 sudo yum module enable perl:5.26 -y
-sudo dnf install wget curl -y
+sudo dnf install wget curl rsync -y
 sudo dnf install util-linux-user -y
 sudo dnf install libzstd -y
 sudo dnf install tig htop mc nano screen ncdu tigervnc-server -y
