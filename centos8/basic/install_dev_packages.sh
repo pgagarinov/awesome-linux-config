@@ -12,7 +12,7 @@ sudo yum module enable perl:5.26 -y
 sudo dnf install wget curl rsync -y
 sudo dnf install util-linux-user -y
 sudo dnf install libzstd -y
-sudo dnf install tig htop mc nano screen ncdu tigervnc-server -y
+sudo dnf install tig htop mc nano vim screen ncdu tigervnc-server -y
 sudo dnf install transmission telnet -y
 sudo dnf install python3 python2 -y
 sudo dnf install java-1.8.0-openjdk-devel maven -y

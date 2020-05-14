@@ -14,7 +14,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH=/usr/local/aws/bin:$PATH
+export PATH=$PATH:/usr/local/aws/bin
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
