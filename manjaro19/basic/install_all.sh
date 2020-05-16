@@ -80,6 +80,11 @@ printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts: done${NOCOLOR
 printf "${MSGCOLOR}Installing and configuring extras...${NOCOLOR}\n"
 ./install_extras.sh
 printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Installing spellchecking...${NOCOLOR}\n"
+./install_spellchecking.sh
+printf "${MSGCOLOR}Installing spellchecking: done${NOCOLOR}\n"
+
 printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
 ./install_minikube.sh
 printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"

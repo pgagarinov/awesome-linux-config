@@ -99,3 +99,26 @@ export PLASMA_USE_QT_SCALING=1
 bash -c "QT_SCALE_FACTOR=1.5 /usr/bin/zoom %U"
 to fix the problem with Zoom scaling when KDE display scaling is set to 1.5
 
+Used commands:
+
+sudo nano /etc/defult/grub
+
+sudo update-grub
+
+cat /proc/sys/vm/swappiness
+
+sudo nano /etc/sysctl.d/100-manjaro.conf
+
+vm.swappiness=10
+
+kdesu python3 /usr/lib/python3.7/site-packages/gufw/gufw.py
+
+gksudo python3 /usr/lib/python3.6/site-packages/gufw/gufw.py
+
+sudo pacman -S aspell-en libmythes mythes-en languagetool
+
+sudo systemctl enable fstrim.timer
+
+sudo systemctl --failed
+
+sudo journalctl -p 3 -xb
