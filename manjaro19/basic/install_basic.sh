@@ -10,13 +10,13 @@ printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 ./remove_canonical_stuff.sh
 printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Enabling AURs...${NOCOLOR}\n"
-./enable_aurs.sh
-printf "${MSGCOLOR}Enabling AURs: done${NOCOLOR}\n"
-
 printf "${MSGCOLOR}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh
 printf "${MSGCOLOR}Installing dev packages: done${NOCOLOR}\n\n"
+
+printf "${MSGCOLOR}Enabling AURs...${NOCOLOR}\n"
+./enable_aurs.sh
+printf "${MSGCOLOR}Enabling AURs: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing NodeJS...${NOCOLOR}\n"
 ./install_nodejs.sh
