@@ -1,4 +1,9 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm base-devel flatpak wget curl tig htop mc nano screen ncdu vim nano-syntax-highlighting neofetch most
+sudo pacman -S --noconfirm base-devel
+sudo pacman -S --noconfirm htop neofetch most
+sudo pacman -S --noconfirm screen
+sudo pacman -S --noconfirm nano vim nano-syntax-highlighting
+sudo pacman -S --noconfirm mc ncdu
+sudo pacman -S --noconfirm wget curl bind-tools
 echo "include /usr/share/nano-syntax-highlighting/*.nanorc" >> ~/.nanorc

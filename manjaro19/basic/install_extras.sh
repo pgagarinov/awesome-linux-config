@@ -16,6 +16,9 @@ sudo pacman -S --noconfirm brave
 # Install Zoom
 yay -Sy --noconfirm zoom 
 
+# Install flatpak
+sudo pacman -S --noconfirm flatpak
+
 # Install Viber only for a current user
 flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
 flatpak install -y --user flathub com.viber.Viber
