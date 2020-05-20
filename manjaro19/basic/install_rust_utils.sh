@@ -1,23 +1,18 @@
 #!/bin/sh
 set -e
 
-rm -rf ./.cargo
-rm -rf ./.config/broot
-rm -rf ./.config/pulse
-
 sudo pacman -S --noconfirm llvm clang
-
-curl https://sh.rustup.rs -sSf | sh -s -- -y
-source $HOME/.cargo/env
-cargo install -j$(nproc) broot
+sudo pacman -S --noconfirm rustup
+rustup default stable
+rustup component add rls
+rustup component add rustfmt
+sudo pacman -S --noconfirm broot bandwhich fd bat diff-so-fancy
 broot --install
-#cargo install -j$(nproc) bandwhich
-cargo install -j$(nproc) fd-find
-cargo install -j$(nproc) du-dust
-cargo install -j$(nproc) bat
+yay -S --noconfirm dust
 
+# Configure git to use d-s-f for *all* diff operations
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
-grep -qxF 'source $HOME/.config/broot/launcher/bash/br' ~/.zshrc || echo 'source $HOME/.config/broot/launcher/bash/br'>> ~/.zshrc
 grep -qxF 'export PATH="$HOME/.cargo/bin:$PATH"' ~/.zprofile || echo 'export PATH="$HOME/.cargo/bin:$PATH"'>> ~/.zprofile
 source ~/.zshrc
 source ~/.zprofile

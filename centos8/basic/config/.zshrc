@@ -14,7 +14,7 @@ fi
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export PATH=$PATH:/usr/local/aws/bin
+export PATH=$HOME/.local/bin:$PATH
 
 #[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -22,7 +22,7 @@ export PATH=$PATH:/usr/local/aws/bin
 FD_OPTIONS="--follow --exclude .git --exclude node_modules --hidden"
 
 # Change behavior of fzf dialogue
-export FZF_DEFAULT_OPTS="--no-mouse --height 90% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers --pager=always {} ),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | pbcopy)'"
+export FZF_DEFAULT_OPTS="--no-mouse --height 90% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='f3:execute(bat --style=numbers --pager=less --paging=always {} ),f2:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | pbcopy)'"
 
 # Change find backend
 # Use 'git ls-files' when inside GIT repo, or fd otherwise
@@ -145,6 +145,8 @@ source $HOME/.config/broot/launcher/bash/br
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias ll='ls -al'
+
+alias sudo='sudo ' #this allows to use `sudo ll`
 
 # to fix the problem with colored-man-pages zsh plugin on Gnome and KDE
 export GROFF_NO_SGR=1 
