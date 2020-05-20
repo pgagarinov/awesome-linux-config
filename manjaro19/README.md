@@ -3,7 +3,7 @@
 Please follow the steps below:
 1. [**Important** ]Update the system
 	```bash
-	sudo pacman -Syyu
+	sudo pacman -Syyuu
 	```
 2. [**Important** ] After successfully updates reboot the system
 	```bash 
