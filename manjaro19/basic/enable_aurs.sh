@@ -5,9 +5,6 @@ set -e
 
 # Pure Arch system doesn't have pamac-cli package in the official repo
 if uname -r | grep 'MANJARO' > /dev/null; then
-  sudo pacman -S --noconfirm pamac-cli
-  #enable AUR in pamac
-  sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
   # Install yay installer
   sudo pacman -S --noconfirm yay
 else
@@ -18,4 +15,8 @@ else
  cd ..
  rm -rf ./yay-git
 fi
+
+yay -S --noconfirm pamac-cli
+#enable AUR in pamac
+sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 
