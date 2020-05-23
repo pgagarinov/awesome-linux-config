@@ -12,7 +12,7 @@ sudo yum group install "Development Tools" -y
 sudo yum install wget curl rsync -y
 sudo yum install util-linux -y
 sudo yum install libzstd -y
-sudo yum install tig htop mc nano vim screen ncdu tigervnc-server -y
+sudo yum install tig htop mc nano vim screen ncdu tigervnc-server tmux -y
 sudo yum install transmission telnet -y
 sudo yum install python3 python2 -y
 sudo yum install java-1.8.0-openjdk-devel maven -y
