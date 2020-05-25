@@ -5,19 +5,19 @@ sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 pacman -Syyu
 
 # Install yay installer
-sudo pacman -S --noconfirm yay
+sudo pacman -S --noconfirm --needed yay
 
 #Updating yay packages
 yay -Syu
 
 # Install Brave Browser
-sudo pacman -S --noconfirm brave
+sudo pacman -S --noconfirm --needed brave
 
 # Install Zoom
 yay -Sy --noconfirm zoom 
 
 # Install flatpak
-sudo pacman -S --noconfirm flatpak
+sudo pacman -S --noconfirm --needed flatpak
 
 # Install Viber only for a current user
 flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -34,7 +34,7 @@ sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
     > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # Install timeshift for local backups
-sudo pacman -S --noconfirm timeshift
+sudo pacman -S --noconfirm --needed timeshift
 
 # Bleachbit for cleaning the system
 sudo pacman -S --noconfrm bleachbit
@@ -43,25 +43,25 @@ sudo pacman -S --noconfrm bleachbit
 yay -S --noconfirm slack-desktop
 
 # Install FileZilla
-sudo pacman -S --noconfirm filezilla
+sudo pacman -S --noconfirm --needed filezilla
 
 # Install Skype
 #yay -S --noconfirm skype
 yay -S --noconfirm skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
-sudo pacman -S --noconfirm xdg-utils
+sudo pacman -S --noconfirm --needed xdg-utils
 yay -S --noconfirm pycharm-professional
 #flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
-sudo pacman -S --noconfirm krusader
+sudo pacman -S --noconfirm --needed krusader
 
 # Cool Multi-window terminal
-sudo pacman -S --noconfirm terminator
+sudo pacman -S --noconfirm --needed terminator
 
 # VSCode
-sudo pacman -S --noconfirm code
+sudo pacman -S --noconfirm --needed code
 
 # Libre Office and Microsoft fonts 
 flatpak install -y --user flathub org.libreoffice.LibreOffice
@@ -69,15 +69,15 @@ yay -S --noconfirm ttf-ms-fonts
 yay -S --noconfirm ttf-vista-fonts
 
 # Install GIMP image editor
-#sudo pacman -S --noconfirm gimp
+#sudo pacman -S --noconfirm --needed gimp
 
 # Virt viewer is SPICE client
 # https://www.spice-space.org/spice-user-manual.html#spice-client
-#sudo pacman -S --noconfirm virt-viewer
+#sudo pacman -S --noconfirm --needed virt-viewer
 
 # Virt manager is UI app for managing KVM VMs
 # https://wiki.manjaro.org/index.php?title=Virt-manager
-sudo pacman -S --noconfirm virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo pacman -S --noconfirm --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 
@@ -102,4 +102,4 @@ yay -S --noconfirm chromedriver
 
 #Install Firefox driver 
 #yay -S --noconfirm geckodriver-hg
-sudo pacman -S --noconfirm geckodriver
+sudo pacman -S --noconfirm --needed geckodriver

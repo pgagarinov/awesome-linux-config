@@ -1,3 +1,3 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm aspell-en libmythes mythes-en languagetool
+sudo pacman -S --noconfirm --needed aspell-en libmythes mythes-en languagetool

@@ -6,7 +6,7 @@ set -e
 # Pure Arch system doesn't have pamac-cli package in the official repo
 if uname -r | grep 'MANJARO' > /dev/null; then
   # Install yay installer
-  sudo pacman -S --noconfirm yay
+  sudo pacman -S --noconfirm --needed yay
 else
  rm -rf ./yay-git
  git clone https://aur.archlinux.org/yay-git.git

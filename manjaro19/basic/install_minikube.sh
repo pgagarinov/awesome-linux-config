@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm minikube
-sudo pacman -S --noconfirm kubectl
+sudo pacman -S --noconfirm --needed minikube
+sudo pacman -S --noconfirm --needed kubectl
 
 ## Check that minikube works as expected
 
