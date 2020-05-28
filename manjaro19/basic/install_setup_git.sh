@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm git git-lfs tig
+sudo pacman -S --noconfirm --needed git git-lfs tig
 #git config --global user.name "Your Name"
 #git config --global user.email "your@email"
 

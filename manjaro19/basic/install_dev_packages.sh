@@ -1,10 +1,10 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm base-devel
-sudo pacman -S --noconfirm htop neofetch most
-sudo pacman -S --noconfirm screen tmux
-sudo pacman -S --noconfirm nano vim nano-syntax-highlighting
-sudo pacman -S --noconfirm mc ncdu
-sudo pacman -S --noconfirm wget curl bind-tools rsync
-sudo pacman -S --noconfirm unzip
+sudo pacman -S --noconfirm --needed base-devel
+sudo pacman -S --noconfirm --needed htop neofetch most
+sudo pacman -S --noconfirm --needed screen tmux
+sudo pacman -S --noconfirm --needed nano vim nano-syntax-highlighting
+sudo pacman -S --noconfirm --needed mc ncdu
+sudo pacman -S --noconfirm --needed wget curl bind-tools rsync
+sudo pacman -S --noconfirm --needed unzip
 echo "include /usr/share/nano-syntax-highlighting/*.nanorc" >> ~/.nanorc

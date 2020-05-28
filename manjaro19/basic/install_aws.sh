@@ -1,4 +1,4 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm aws-cli
-yay -S --noconfirm aws-iam-authenticator-bin
+sudo pacman -S --noconfirm --needed aws-cli
+yay -S --noconfirm --needed aws-iam-authenticator-bin

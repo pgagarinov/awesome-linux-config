@@ -8,7 +8,7 @@ printf 'Changing installer permissions...'
 sudo chmod +x eset_nod32av_64bit_en.linux
 
 printf 'Install dependencies...'
-yay -S --noconfirm lib32-gtk2 cpio
+yay -S --noconfirm --needed lib32-gtk2 cpio
 
 printf 'Opening the installer, please follow the graphical interface...'
 ./eset_nod32av_64bit_en.linux
