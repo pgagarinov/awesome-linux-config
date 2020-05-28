@@ -16,7 +16,7 @@ else
  rm -rf ./yay-git
 fi
 
-yay -S --noconfirm pamac-cli
+yay -S --noconfirm --needed pamac-cli
 #enable AUR in pamac
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 

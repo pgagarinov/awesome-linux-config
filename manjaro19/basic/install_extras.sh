@@ -40,18 +40,18 @@ sudo pacman -S --noconfirm --needed timeshift
 sudo pacman -S --noconfrm bleachbit
 
 # Install Slack for Desktop
-yay -S --noconfirm slack-desktop
+yay -S --noconfirm --needed slack-desktop
 
 # Install FileZilla
 sudo pacman -S --noconfirm --needed filezilla
 
 # Install Skype
-#yay -S --noconfirm skype
-yay -S --noconfirm skypeforlinux-stable-bin
+#yay -S --noconfirm --needed skype
+yay -S --noconfirm --needed skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
 sudo pacman -S --noconfirm --needed xdg-utils
-yay -S --noconfirm pycharm-professional
+yay -S --noconfirm --needed pycharm-professional
 #flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
@@ -65,8 +65,8 @@ sudo pacman -S --noconfirm --needed code
 
 # Libre Office and Microsoft fonts 
 flatpak install -y --user flathub org.libreoffice.LibreOffice
-yay -S --noconfirm ttf-ms-fonts
-yay -S --noconfirm ttf-vista-fonts
+yay -S --noconfirm --needed ttf-ms-fonts
+yay -S --noconfirm --needed ttf-vista-fonts
 
 # Install GIMP image editor
 #sudo pacman -S --noconfirm --needed gimp
@@ -83,23 +83,23 @@ sudo systemctl start libvirtd.service
 
 #Install Intellij Ultimate
 #flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-yay -S --noconfirm webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
-yay -S --noconfirm intellij-idea-ultimate-edition
+yay -S --noconfirm --needed webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
+yay -S --noconfirm --needed intellij-idea-ultimate-edition
 
 #Install DataGrip
 flatpak install -y --user flathub com.jetbrains.DataGrip
-#yay -S --noconfirm datagrip
+#yay -S --noconfirm --needed datagrip
 
 #Install EasySSH
 flatpak install -y --user flathub com.github.muriloventuroso.easyssh
-#yay -S --noconfirm easyssh
+#yay -S --noconfirm --needed easyssh
 
 #Install Google Chrome
-yay -S --noconfirm google-chrome
+yay -S --noconfirm --needed google-chrome
 
 #Install Chrome Driver for testing
-yay -S --noconfirm chromedriver
+yay -S --noconfirm --needed chromedriver
 
 #Install Firefox driver 
-#yay -S --noconfirm geckodriver-hg
+#yay -S --noconfirm --needed geckodriver-hg
 sudo pacman -S --noconfirm --needed geckodriver
