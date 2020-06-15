@@ -87,8 +87,8 @@ yay -S --noconfirm --needed webstorm-jre #https://medium.com/@julianvargkim/how-
 yay -S --noconfirm --needed intellij-idea-ultimate-edition
 
 #Install DataGrip
-flatpak install -y --user flathub com.jetbrains.DataGrip
-#yay -S --noconfirm --needed datagrip
+#flatpak install -y --user flathub com.jetbrains.DataGrip
+yay -S --noconfirm --needed datagrip
 
 #Install EasySSH
 flatpak install -y --user flathub com.github.muriloventuroso.easyssh
