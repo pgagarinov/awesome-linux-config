@@ -17,3 +17,9 @@ cd erd
 stack install
 cd ..
 rm -rf ./erd
+
+# Screen capturing software
+yay -S --noconfirm --needed obs-studio
+
+# Video editing software
+yay -S --noconfirm --needed kdenlive

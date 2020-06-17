@@ -88,3 +88,7 @@ printf "${MSGCOLOR}Installing spellchecking: done${NOCOLOR}\n"
 printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
 ./install_minikube.sh
 printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Installing and configuring extras2...${NOCOLOR}\n"
+./install_extras2.sh
+printf "${MSGCOLOR}Installing and configuring extras2: done${NOCOLOR}\n"
