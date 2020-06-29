@@ -53,10 +53,6 @@ printf "${MSGCOLOR}Installing and setting up miniconda...${NOCOLOR}\n"
 ./install_miniconda.sh
 printf "${MSGCOLOR}Installing and setting up miniconda: done...${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Configuring Jupyter...${NOCOLOR}\n"
-./config_jupyter.sh
-printf "${MSGCOLOR}Configuring Jupyter: done${NOCOLOR}\n\n"
-
 printf "${MSGCOLOR}Installing docker...${NOCOLOR}\n"
 ./install_docker.sh
 printf "${MSGCOLOR}Installing docker: done${NOCOLOR}\n\n"
@@ -64,14 +60,6 @@ printf "${MSGCOLOR}Installing docker: done${NOCOLOR}\n\n"
 printf "${MSGCOLOR}Installing docker-compose...${NOCOLOR}\n"
 ./install_docker_compose.sh
 printf "${MSGCOLOR}Installing docker-compose: done${NOCOLOR}\n\n"
-
-printf "${MSGCOLOR}Installing Rust cli utils...${NOCOLOR}\n"
-./install_rust_utils.sh
-printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
-
-printf "${MSGCOLOR}Installing and configuring OhMyZsh...${NOCOLOR}\n"
-./install_ohmyzsh.sh
-printf "${MSGCOLOR}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n"
 ./install_powerlevel10k_fonts.sh
