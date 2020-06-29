@@ -19,9 +19,6 @@ yay -Sy --noconfirm zoom
 # Install flatpak
 sudo pacman -S --noconfirm --needed flatpak
 
-# Install Viber only for a current user
-flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install -y --user flathub com.viber.Viber
 
 # update desktop shortcuts (just in case)
 update-desktop-database ~/.local/share/applications
@@ -63,8 +60,7 @@ sudo pacman -S --noconfirm --needed terminator
 # VSCode
 sudo pacman -S --noconfirm --needed code
 
-# Libre Office and Microsoft fonts 
-flatpak install -y --user flathub org.libreoffice.LibreOffice
+# Microsoft fonts 
 yay -S --noconfirm --needed ttf-ms-fonts
 yay -S --noconfirm --needed ttf-vista-fonts
 
@@ -90,9 +86,6 @@ yay -S --noconfirm --needed intellij-idea-ultimate-edition
 #flatpak install -y --user flathub com.jetbrains.DataGrip
 yay -S --noconfirm --needed datagrip
 
-#Install EasySSH
-flatpak install -y --user flathub com.github.muriloventuroso.easyssh
-#yay -S --noconfirm --needed easyssh
 
 #Install Google Chrome
 yay -S --noconfirm --needed google-chrome
