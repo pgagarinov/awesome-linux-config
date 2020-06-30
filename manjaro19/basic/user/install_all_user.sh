@@ -11,14 +11,18 @@ printf "${MSGCOLOR}Installing and configuring extras...${NOCOLOR}\n"
 ./install_extras_user.sh
 printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
 
-printf "${MSGCOLOR}Installing Rust cli utils...${NOCOLOR}\n"
-./install_rust_utils.sh
-printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Configuring Diff so Fancy...${NOCOLOR}\n"
+./config_diff_so_fancy.sh
+printf "${MSGCOLOR}Configuring Diff so Fancy: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing zsh...${NOCOLOR}\n"
-./install_zsh.sh
-printf "${MSGCOLOR}Installing zsh: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Configuring zsh...${NOCOLOR}\n"
+./config_zsh.sh
+printf "${MSGCOLOR}Configuring zsh: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Installing and configuring OhMyZsh...${NOCOLOR}\n"
 ./install_ohmyzsh.sh
 printf "${MSGCOLOR}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Configuring Powerlevel10k fonts...${NOCOLOR}\n"
+./config_powerlevel10k_fonts.sh
+printf "${MSGCOLOR}Configuring Powerlevel10k fonts: done${NOCOLOR}\n"
