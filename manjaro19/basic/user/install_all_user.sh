@@ -11,10 +11,6 @@ printf "${MSGCOLOR}Installing and configuring extras...${NOCOLOR}\n"
 ./install_extras_user.sh
 printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
 
-printf "${MSGCOLOR}Configuring zsh...${NOCOLOR}\n"
-./config_zsh.sh
-printf "${MSGCOLOR}Configuring zsh: done${NOCOLOR}\n\n"
-
 printf "${MSGCOLOR}Installing and configuring OhMyZsh...${NOCOLOR}\n"
 ./install_ohmyzsh.sh
 printf "${MSGCOLOR}Installing and configuring OhMyZsh: done${NOCOLOR}\n"
