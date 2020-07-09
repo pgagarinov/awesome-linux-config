@@ -10,3 +10,4 @@ sudo pacman -S --noconfirm --needed git git-lfs tig
 # we do not plan to use Windows so we decide to track execute bits to avoid calling 
 # git update-index --chmod=+x ./file.sh everytime we need to track x bit
 git config --global core.fileMode true
+git config --global core.autocrlf true
