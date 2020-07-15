@@ -23,3 +23,6 @@ yay -S --noconfirm --needed obs-studio
 
 # Video editing software
 yay -S --noconfirm --needed kdenlive
+
+# Diagramming Tool and Screenshot tool
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm drawio-desktop flameshot
