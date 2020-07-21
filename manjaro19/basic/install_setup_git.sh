@@ -7,7 +7,8 @@ sudo pacman -S --noconfirm --needed git git-lfs tig
 # https://stackoverflow.com/questions/1580596/how-do-i-make-git-ignore-file-mode-chmod-changes
 # https://medium.com/@tahteche/how-git-treats-changes-in-file-permissions-f71874ca239d
 
-# we do not plan to use Windows so we decide to track execute bits to avoid calling 
+# we do not plan to use Windows so we decide to track execute bits to avoid calling
 # git update-index --chmod=+x ./file.sh everytime we need to track x bit
 git config --global core.fileMode true
-git config --global core.autocrlf true
+#we do not want to set this globally, use it only for specific repos with some code committed on Windows
+# git config --global core.autocrlf true

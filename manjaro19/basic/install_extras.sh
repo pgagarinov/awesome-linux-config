@@ -2,33 +2,22 @@
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
 
 #Update system via Pacman
-pacman -Syyu
+pacman -Syyuu
 
 # Install yay installer
 sudo pacman -S --noconfirm --needed yay
 
 #Updating yay packages
-yay -Syu
+yay -Syyuu --nocleanmenu --nodiffmenu --noconfirm
 
 # Install Brave Browser
 sudo pacman -S --noconfirm --needed brave
 
 # Install Zoom
-yay -Sy --noconfirm zoom 
+yay -Sy --noconfirm zoom
 
 # Install flatpak
 sudo pacman -S --noconfirm --needed flatpak
-
-
-# update desktop shortcuts (just in case)
-update-desktop-database ~/.local/share/applications
-
-
-# Disable bookmarks search in Krunner
-mkdir -p ~/.local/share/kservices5
-sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
-    /usr/share/kservices5/plasma-runner-bookmarks.desktop \
-    > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # Install timeshift for local backups
 sudo pacman -S --noconfirm --needed timeshift
@@ -65,7 +54,7 @@ yay -S --noconfirm --needed ttf-ms-fonts
 yay -S --noconfirm --needed ttf-vista-fonts
 
 # Install GIMP image editor
-#sudo pacman -S --noconfirm --needed gimp
+sudo pacman -S --noconfirm --needed gimp
 
 # Virt viewer is SPICE client
 # https://www.spice-space.org/spice-user-manual.html#spice-client

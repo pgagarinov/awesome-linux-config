@@ -7,4 +7,3 @@ sudo pacman -S --noconfirm --needed nano vim nano-syntax-highlighting
 sudo pacman -S --noconfirm --needed mc ncdu
 sudo pacman -S --noconfirm --needed wget curl bind-tools rsync
 sudo pacman -S --noconfirm --needed unzip
-echo "include /usr/share/nano-syntax-highlighting/*.nanorc" >> ~/.nanorc
