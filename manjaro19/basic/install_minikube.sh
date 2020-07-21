@@ -7,10 +7,11 @@ sudo pacman -S --noconfirm --needed kubectl
 
 # first become another group, this is the same as 'newgrp docker' but inside the same shell
 group=docker
-if [ $(id -gn) != $group ]; then
+if [[ $(id -gn) != $group ]]; then
  exec sg $group "$0 $*"
 fi
 
+minikube delete
 minikube start
 minikube stop
 
