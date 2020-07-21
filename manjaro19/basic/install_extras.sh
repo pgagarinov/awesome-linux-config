@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm --needed flatpak
 sudo pacman -S --noconfirm --needed timeshift
 
 # Bleachbit for cleaning the system
-sudo pacman -S --noconfrm bleachbit
+sudo pacman -S --noconfirm bleachbit
 
 # Install Slack for Desktop
 yay -S --noconfirm --needed slack-desktop
