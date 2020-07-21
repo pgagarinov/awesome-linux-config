@@ -2,7 +2,7 @@
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
 
 #Update system via Pacman
-pacman -Syyuu
+sudo pacman -Syyuu
 
 # Install yay installer
 sudo pacman -S --noconfirm --needed yay
