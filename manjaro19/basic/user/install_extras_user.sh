@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 # Install Viber only for a current user
-flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak remote-add --user flathub https://flathub.org/repo/flathub.flatpakrepo --if-not-exists
 flatpak install -y --user flathub com.viber.Viber
 
 # Libre Office
