@@ -8,6 +8,7 @@ yay -S --noconfirm --needed dbeaver
 # Stack Haskell platform (dependency for ERD)
 #TODO intall this via pacman if exists
 #curl -sSL https://get.haskellstack.org/ | sh
+yay -S --noconfirm --needed stack
 
 # Graphviz (Graph visualization tool)
 yay -S --noconfirm --needed graphviz
