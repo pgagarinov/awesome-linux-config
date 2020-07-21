@@ -19,3 +19,6 @@ yay -S --noconfirm --needed kdenlive
 
 # Diagramming Tool and Screenshot tool
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm drawio-desktop flameshot
+
+# Github-Desktop
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm github-desktop-bin
