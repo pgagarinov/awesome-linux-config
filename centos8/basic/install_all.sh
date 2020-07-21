@@ -15,9 +15,9 @@ printf "${GREEN}Configuring chronyd ntp demon...${NOCOLOR}\n"
 printf "${GREEN}Configuring chronyd ntp demon: done${NOCOLOR}\n\n"
 
 
-printf "${GREEN}Setting up XRDP...${NOCOLOR}\n"
-./install_xrdp.sh
-printf "${GREEN}Setting up XRDP: done${NOCOLOR}\n\n"
+#printf "${GREEN}Setting up XRDP...${NOCOLOR}\n"
+#./install_xrdp.sh
+#printf "${GREEN}Setting up XRDP: done${NOCOLOR}\n\n"
 
 
 printf "${GREEN}Installing zsh...${NOCOLOR}\n"
