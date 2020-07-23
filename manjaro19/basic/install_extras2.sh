@@ -24,3 +24,6 @@ yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm drawio-desktop flameshot
 
 # Github-Desktop
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm github-desktop-bin
+
+# Git-filter-repo
+yay -S --needed --nocleanmenu --nodiffmenu --noconfirm git-filter-repo
