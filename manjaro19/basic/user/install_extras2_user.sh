@@ -7,7 +7,7 @@ sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
     > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # ERD - entity relation diagramming tool (https://github.com/BurntSushi/erd)
-git clone git://github.com/BurntSushi/erd
+git clone https://github.com/BurntSushi/erd.git
 cd erd
 stack install
 cd ..

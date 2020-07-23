@@ -23,6 +23,12 @@ printf "${MSGCOLOR}Configuring Diff so Fancy...${NOCOLOR}\n"
 ./config_diff_so_fancy.sh
 printf "${MSGCOLOR}Configuring Diff so Fancy: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing and configuring extras...${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing and configuring extras2...${NOCOLOR}\n"
 ./install_extras2_user.sh
-printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing and configuring extras2: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Installing and configuring git...${NOCOLOR}\n"
+./config_git.sh
+printf "${MSGCOLOR}Installing and configuring git: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}SCRIPT SUCCESFULLY INSTALLED!!!${NOCOLOR}\n"
