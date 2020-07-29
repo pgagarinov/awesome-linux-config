@@ -17,7 +17,7 @@ sudo dnf install transmission telnet -y
 sudo dnf install python3 python2 -y
 sudo dnf install java-1.8.0-openjdk-devel maven -y
 sudo alternatives --set python /usr/bin/python3
-
+sudo dnf install nodejs -y
 #
 # for man pages to look nicer
 # this package is not yet available in CentOS 8 but can be installed on CentOS 7 via yum
