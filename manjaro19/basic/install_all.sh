@@ -10,9 +10,9 @@ printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 ./remove_canonical_stuff.sh
 printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
-./select_mirrors_and_update.sh
-printf "${MSGCOLOR}Selecting fastest mirrors and updating packages: done${NOCOLOR}\n"
+#printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
+#./select_mirrors_and_update.sh
+#printf "${MSGCOLOR}Selecting fastest mirrors and updating packages: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing dev packages...${NOCOLOR}\n"
 ./install_dev_packages.sh

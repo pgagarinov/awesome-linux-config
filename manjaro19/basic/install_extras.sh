@@ -1,8 +1,10 @@
+#!/bin/bash
+set -e
 #enable AUR in pamac
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
 
 #Update system via Pacman
-pacman -Syyuu
+sudo pacman -Syyuu
 
 # Install yay installer
 sudo pacman -S --noconfirm --needed yay
@@ -23,7 +25,7 @@ sudo pacman -S --noconfirm --needed flatpak
 sudo pacman -S --noconfirm --needed timeshift
 
 # Bleachbit for cleaning the system
-sudo pacman -S --noconfrm bleachbit
+sudo pacman -S --noconfirm bleachbit
 
 # Install Slack for Desktop
 yay -S --noconfirm --needed slack-desktop
