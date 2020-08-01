@@ -27,3 +27,6 @@ yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm github-desktop-bin
 
 # Git-filter-repo
 yay -S --needed --nocleanmenu --nodiffmenu --noconfirm git-filter-repo
+
+# FAR for Linux
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm far2l-git
