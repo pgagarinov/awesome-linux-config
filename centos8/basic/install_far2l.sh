@@ -18,5 +18,5 @@ mkdir ./build
 cd ./build
 cmake3 -DUSEWX=no -DPYTHON=yes -DCMAKE_BUILD_TYPE=Release ..
 make -j4
-make install
+sudo make install
 cd ../..
