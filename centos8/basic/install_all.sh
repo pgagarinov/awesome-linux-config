@@ -50,11 +50,13 @@ printf "${GREEN}Installing docker-compose...${NOCOLOR}\n"
 ./install_docker_compose.sh
 printf "${GREEN}Installing docker-compose: done${NOCOLOR}\n\n"
 
+printf "${GREEN}Installing FAR for Linux...${NOCOLOR}\n"
+./install_far2l.sh
+printf "${GREEN}Installing FAR for Linux: done${NOCOLOR}\n\n"
 
 printf "${GREEN}Installing Rust cli utils...${NOCOLOR}\n"
 ./install_rust_utils.sh
 printf "${GREEN}Installing Rust cli utils: done${NOCOLOR}\n\n"
-
 
 printf "${GREEN}Installing and configuing OhMyZsh...${NOCOLOR}\n"
 ./install_ohmyzsh.sh
