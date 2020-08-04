@@ -24,3 +24,6 @@ sudo pacman -S --noconfirm --needed keepassxc
 
 # qTox
 yay -S --noconfirm --needed qtox
+
+# Added krohnkite Tiling script
+yay -S kwin-scripts-krohnkite-git --noconfir --needed
