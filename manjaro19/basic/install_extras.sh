@@ -67,6 +67,7 @@ sudo pacman -S --noconfirm --needed gimp
 sudo pacman -S --noconfirm --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
+sudo usermod -aG libvirt $USER
 
 #Install Intellij Ultimate
 #flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
