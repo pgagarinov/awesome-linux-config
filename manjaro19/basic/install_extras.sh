@@ -60,7 +60,7 @@ sudo pacman -S --noconfirm --needed gimp
 
 # Virt viewer is SPICE client
 # https://www.spice-space.org/spice-user-manual.html#spice-client
-#sudo pacman -S --noconfirm --needed virt-viewer
+yay -S --noconfirm --needed virt-viewer
 
 # Virt manager is UI app for managing KVM VMs
 # https://wiki.manjaro.org/index.php?title=Virt-manager

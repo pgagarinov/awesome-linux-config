@@ -20,3 +20,7 @@ yay -S --noconfirm --needed pamac-cli
 #enable AUR in pamac
 sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf"
 
+#this is required for https://wiki.archlinux.org/index.php/Makepkg#Utilizing_multiple_cores_on_compression
+yay -S pigz pbzip2 --noconfirm --needed
+
+

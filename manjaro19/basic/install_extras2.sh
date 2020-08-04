@@ -5,6 +5,9 @@ set -e
 # DBearver db client
 yay -S --noconfirm --needed dbeaver
 
+# pgAdming db client for PostgreSQL
+yay -S pgadmin4 --noconfirm --needed
+
 # Stack Haskell platform (dependency for ERD)
 #TODO intall this via pacman if exists
 #curl -sSL https://get.haskellstack.org/ | sh
