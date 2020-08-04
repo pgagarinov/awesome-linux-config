@@ -11,5 +11,5 @@ sudo usermod -aG libvirt <username>
 ## 4. Change shell to zsh
 see ./change_to_zsh.sh script
 
-## 5. Enable parallel compression for AUR packages as per
+## 5. Enable parallel compression for AUR packages
 https://wiki.archlinux.org/index.php/Makepkg#Utilizing_multiple_cores_on_compression
