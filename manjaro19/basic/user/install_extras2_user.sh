@@ -7,6 +7,7 @@ sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
     > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # ERD - entity relation diagramming tool (https://github.com/BurntSushi/erd)
+rm -rf ./erd
 git clone https://github.com/BurntSushi/erd.git
 cd erd
 stack install
@@ -18,5 +19,4 @@ echo "include /usr/share/nano-syntax-highlighting/*.nanorc" >> ~/.nanorc
 
 
 # update desktop shortcuts (just in case)
-update-desktop-database ~/.local/share/applications
-
+update-desktop-database ~/.local/share/applications||true
