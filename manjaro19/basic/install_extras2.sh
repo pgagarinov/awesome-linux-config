@@ -31,3 +31,9 @@ yay -S --needed --nocleanmenu --nodiffmenu --noconfirm git-filter-repo
 
 # FAR for Linux
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm far2l-git
+
+#VLC media player
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm vlc
+
+#KeePassXC password database
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm keepassxc
