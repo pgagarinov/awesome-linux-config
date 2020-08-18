@@ -6,5 +6,5 @@ manjaro kde package was named 'manjaro-kde-settings' to keep backward compatibil
 
 
 #2. Copy content of /etc/skel into your ~/.config folder
-sudo cp /etc/skel/.config/* ~/.config
+sudo cp -r /etc/skel/.config/* ~/.config
 sudo chown -R <username>:<username> ~/.config
