@@ -5,10 +5,10 @@ Copy the file to `/etc/systemd/system/`
 After that you need to start and enable the service
 
 Run the command with root priviledges
-><code lang='bash'>
+<code>
 systemctl start selenoid_head_example.service
 </code>
 
-><code lang='bash'>
+<code>
 systemctl enable selenoid_head_example.service
 </code>
