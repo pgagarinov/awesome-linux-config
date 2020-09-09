@@ -1,0 +1,15 @@
+[Unit]
+Description= selenoid in docker run
+After=docker.service
+BindsTo=docker.service
+ReloadPropagatedFrom=docker.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/selenoid
+ExecStart=sh /opt/selenoid/start_selenoid_head.sh
+ExecReload=sh /opt/selenoid/start_selenoid_head.sh
+RemainAfterExit=no
+
+[Install]
+WantedBy=multi-user.target
