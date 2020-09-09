@@ -2,9 +2,14 @@
 ## 1. Client application
 Client application to connect VNC must be RealVNC Viewer (for Windows); Remmina (for Linux)
 ## 2. Replace password for VNC session
-
-> x11vnc --storepasswd **Passw0rd** /etc/x11vnc.passwd 
-
+1. We must temporarily run bash. for this typing command 
+> /bin/bash
+2. 
+> x11vnc --storepasswd /etc/x11vnc.passwd 
+3. 
+Enter the password twice and confirm the entry by pressing **Y**
+4. 
+After restarting the PC, you can use a new password
 ## 3. Keyboard errors
 **3.1.** To troubleshoot the transmission of keyboard presses through VNC, you must:
 
