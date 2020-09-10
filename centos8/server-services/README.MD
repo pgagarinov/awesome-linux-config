@@ -44,6 +44,7 @@ This example is based on port 8080
 These commands need to be runned with root priviledges
 <code>
 systemctl start autossh-port@8080.service
+
 systemctl enable autossh-port@8080.service
 </code>
 
