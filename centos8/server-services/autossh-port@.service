@@ -1,0 +1,16 @@
+[Unit]
+Description= Auto ssh revers tunnel on cindy on port %I
+After=network-online.target
+
+[Service]
+Restart=always
+RuntimeMaxSec=86400
+Environment="AUTOSSH_GATETIME=0"
+User=autotunnel
+WorkingDirectory=/home/autotunnel
+ExecStartPre=/usr/bin/autossh -M 0 '<your-server-ip>' 'sudo fuser -k %i/tcp || true'
+ExecStart=/usr/bin/autossh -M 0 '<your-server-ip>' -o "ServerAliveInterval 10" -o "ServerAliveCountMax 3" -p 22 -NR %i:localhost:%i
+ExecStop=/usr/bin/fuser -k %i/tcp || true
+
+[Install]
+WantedBy=multi-user.target
