@@ -29,8 +29,33 @@ Additionally Manjaro scripts install
 * Flameshot
 * Libreoffice
 * IntelliJ Idea Ultimate Edition
+* PyCharm Professional
+* DataGrip
 * IntelliJ Webstorm
-
+* VSCode
+* GitHub Desktop
+* DrawIO Desktop
+* Gimp
+* VLC
+* KeePassXC
+* Stack Haskell Platform
+* Graphviz
+* Erd
+* PgAdmin4
+* DBeaver
+* Slack
+* Zoom
+* Bleach
+* Filezilla Client
+* Skype
+* Krusader
+* Virt-viewer
+* Google Chrome
+* Firefox
+* Brave Browser
+* Geckodriver
+* Chrome Driver
+* Timeshift
 
 ## Manjaro
 ### Prerequisites
