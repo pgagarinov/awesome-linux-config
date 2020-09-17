@@ -71,3 +71,24 @@ sudo chsh -s /bin/zsh <your_user_name>
 sudo usermod -aG docker <your_user_name>
 ```
 
+## CentOS 8
+### Prerequisites
+1. Sudo permissions for your user
+
+### How to install
+```
+git clone git@github.com:Alliedium/awesome-linux-config.git
+cd ./awesome-linux-config/centos8/basic
+./install_all.sh
+```
+
+## CentOS 7
+### Prerequisites
+1. Sudo permissions for your user
+
+### How to install
+```
+git clone git@github.com:Alliedium/awesome-linux-config.git
+cd ./awesome-linux-config/centos7/basic
+./install_all.sh
+```
