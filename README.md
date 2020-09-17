@@ -1,4 +1,4 @@
-# awesome-linux-config
+# Awesome Linux Configuration Scripts
 A curated set of awesome configuration scripts for various Linux-based systems.
 
 The following scripts configure 
