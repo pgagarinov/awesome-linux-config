@@ -60,6 +60,7 @@ Additionally Manjaro scripts install
 ## Manjaro
 ### Prerequisites
 1. Sudo permissions for your user
+2. GIT (type `sudo pacman -S git` to install)
 
 ### How to install
 ```
@@ -74,6 +75,7 @@ sudo usermod -aG docker <your_user_name>
 ## CentOS 8
 ### Prerequisites
 1. Sudo permissions for your user
+2. GIT (type `sudo dnf install git` to install)
 
 ### How to install
 ```
@@ -85,10 +87,10 @@ cd ./awesome-linux-config/centos8/basic
 ## CentOS 7
 ### Prerequisites
 1. Sudo permissions for your user
+2. GIT (type `sudo yum install git` to install)
 
 ### How to install
 ```
 git clone git@github.com:Alliedium/awesome-linux-config.git
 cd ./awesome-linux-config/centos7/basic
-./install_all.sh
-```
+./install_all.sh```
