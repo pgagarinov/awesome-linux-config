@@ -37,3 +37,6 @@ yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm vlc
 
 #KeePassXC password database
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm keepassxc
+
+#Veyon classroom
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm veyon
