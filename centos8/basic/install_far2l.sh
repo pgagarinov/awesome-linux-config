@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 
+sudo dnf -y install epel-release
 sudo dnf -y install gawk m4 glib2-devel wxGTK3-devel cmake gcc-c++ git
 
 
