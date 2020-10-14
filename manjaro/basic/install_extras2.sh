@@ -39,4 +39,4 @@ yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm vlc
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm keepassxc
 
 #Veyon classroom
-yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm veyon
+#yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm veyon
