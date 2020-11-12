@@ -1,10 +1,11 @@
 #!/bin/bash
 set -e
 # Disable bookmarks search in Krunner
-mkdir -p ~/.local/share/kservices5
-sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
-    /usr/share/kservices5/plasma-runner-bookmarks.desktop \
-    > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
+# ---- Commented out because this doesn't work in KDE plasma 5.20
+# mkdir -p ~/.local/share/kservices5
+# sed 's/EnabledByDefault=true/EnabledByDefault=false/' \
+#     /usr/share/kservices5/plasma-runner-bookmarks.desktop \
+#     > ~/.local/share/kservices5/plasma-runner-bookmarks.desktop
 
 # ERD - entity relation diagramming tool (https://github.com/BurntSushi/erd)
 rm -rf ./erd
