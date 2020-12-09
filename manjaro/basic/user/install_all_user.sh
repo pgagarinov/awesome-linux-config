@@ -31,4 +31,8 @@ printf "${MSGCOLOR}Installing and configuring git...${NOCOLOR}\n"
 ./config_git.sh
 printf "${MSGCOLOR}Installing and configuring git: done${NOCOLOR}\n"
 
+printf "${MSGCOLOR}Make IntelliJ2020.3 use JDK11${NOCOLOR}\n"
+./make_intellij2020_3_use_jdk11.sh
+printf "${MSGCOLOR}Make IntelliJ2020.3 use JDK11: done${NOCOLOR}\n"
+
 printf "${MSGCOLOR}SCRIPT SUCCESFULLY INSTALLED!!!${NOCOLOR}\n"
