@@ -30,6 +30,10 @@ printf "${MSGCOLOR}Installing JDK8 and Maven...${NOCOLOR}\n"
 ./install_jdk8_maven.sh
 printf "${MSGCOLOR}Installing JDK8 and Maven: done${NOCOLOR}\n\n"
 
+printf "${MSGCOLOR}Installing JDK11 for IntelliJ >=2020.3 ...${NOCOLOR}\n
+./install_jdk11_4_intellij.sh
+printf "${MSGCOLOR}Installing JDK11 for IntelliJ >=2020.3: done${NOCOLOR}\n
+
 printf "${MSGCOLOR}Setting up RDP...${NOCOLOR}\n"
 ./install_rdp.sh
 printf "${MSGCOLOR}Setting up RDP: done${NOCOLOR}\n\n"
@@ -84,3 +88,4 @@ printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
 printf "${MSGCOLOR}Installing and configuring extras2...${NOCOLOR}\n"
 ./install_extras2.sh
 printf "${MSGCOLOR}Installing and configuring extras2: done${NOCOLOR}\n"
+
