@@ -20,6 +20,7 @@ All scripts install
 * git
 * broot, fd-find, fzf, mc, far2l, tig, htop, mc, nano, vim, screen, ncdu, tmux
 * Rust
+* Allure commandline
 
 Additionally Manjaro scripts install
 
