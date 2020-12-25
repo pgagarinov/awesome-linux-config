@@ -13,7 +13,9 @@ sudo pacman -S --noconfirm --needed yay
 yay -Syyuu --nocleanmenu --nodiffmenu --noconfirm
 
 # Install Brave Browser
-sudo pacman -S --noconfirm --needed brave
+# sudo pacman -S --noconfirm --needed brave
+## Brave was removed from the official repos:
+## see https://forum.manjaro.org/t/brave-browser-update/44416/2
 
 # Install Zoom
 yay -Sy --noconfirm zoom
@@ -51,7 +53,7 @@ sudo pacman -S --noconfirm --needed terminator
 # VSCode
 sudo pacman -S --noconfirm --needed code
 
-# Microsoft fonts 
+# Microsoft fonts
 yay -S --noconfirm --needed ttf-ms-fonts
 yay -S --noconfirm --needed ttf-vista-fonts
 
