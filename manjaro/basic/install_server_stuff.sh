@@ -64,10 +64,6 @@ printf "${MSGCOLOR}Installing Rust cli utils...${NOCOLOR}\n"
 ./install_rust_utils.sh
 printf "${MSGCOLOR}Installing Rust cli utils: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n"
-./install_powerlevel10k_fonts.sh
-printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts: done${NOCOLOR}\n"
-
 printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
 ./install_minikube.sh
 printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
@@ -75,4 +71,3 @@ printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
 printf "${MSGCOLOR}Installing yay...${NOCOLOR}\n"
 ./install_yay.sh
 printf "${MSGCOLOR}Installing yay: done${NOCOLOR}\n"
-
