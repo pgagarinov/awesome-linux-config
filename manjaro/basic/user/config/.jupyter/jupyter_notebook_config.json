@@ -2,6 +2,9 @@
   "NotebookApp": {
     "password": "sha1:1c6629bd2803:1b0bf485ad95f42e3e87036336b30a45a2c6a671",
     "allow_origin": "*",
-    "ip": "0.0.0.0"
+    "ip": "0.0.0.0",
+    "nbserver_extensions": {
+      "jupyterlab_code_formatter": true
+    }
   }
 }

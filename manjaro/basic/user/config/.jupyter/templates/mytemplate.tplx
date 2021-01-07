@@ -1,0 +1,18 @@
+  GNU nano 5.4                                                                                           /home/peter/.jupyter/templates/mytemplate.tplx                                                                                                      
+% Default to the notebook output style
+((* set cell_style = 'style_jupyter.tex.j2' *))
+% Inherit from the specified cell style.
+((* extends cell_style *))
+
+((* block packages *))
+((( super() ))) % load all other packages
+% For cyrillic symbols
+\usepackage[utf8x]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[english,russian]{babel}
+\usepackage{mathtools}
+((* endblock packages *))
+
+((* block docclass *))
+\documentclass{article}
+((* endblock docclass *))

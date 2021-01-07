@@ -874,3 +874,8 @@
 #  provided, this value will correspond to the value of the Gateway url with 'ws'
 #  in place of 'http'.  (JUPYTER_GATEWAY_WS_URL env var)
 #c.GatewayClient.ws_url = None
+import os
+c.NbConvertApp.export_format = 'pdf'
+c.TemplateExporter.extra_template_basedirs=[os.path.expanduser('~/.jupyter/templates')]
+c.LatexExporter.template_name = 'mytemplate'
+c.PDFExporter.template_name='mytemplate'
