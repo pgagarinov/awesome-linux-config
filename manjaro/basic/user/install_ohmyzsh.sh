@@ -1,5 +1,8 @@
 #!/bin/zsh
 set -e
+full_path=$(realpath $0)
+dir_path=$(dirname $full_path)
+
 setopt +o nomatch
 rm -rf ~/.oh-my-zsh
 rm -rf ~/.fzf*
@@ -19,7 +22,7 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
 
-cp ../../../centos8/basic/config/.zshrc ~
-cp ../../../centos8/basic/config/.p10k.zsh ~
+cp $dir_path/config/.zshrc ~
+cp $dir_path/config/.p10k.zsh ~
 
 
