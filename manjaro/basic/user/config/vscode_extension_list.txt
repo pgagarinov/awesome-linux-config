@@ -4,4 +4,5 @@ ecmel.vscode-html-css
 julialang.language-julia
 ms-python.python
 rust-lang.rust
+vadimcn.vscode-lldb
 yzhang.markdown-all-in-one
