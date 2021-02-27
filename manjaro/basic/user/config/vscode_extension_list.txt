@@ -1,0 +1,7 @@
+donjayamanne.githistory
+eamodio.gitlens
+ecmel.vscode-html-css
+julialang.language-julia
+ms-python.python
+rust-lang.rust
+yzhang.markdown-all-in-one

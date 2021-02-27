@@ -23,4 +23,9 @@ printf "${MSGCOLOR}Make IntelliJ2020.3 use JDK11${NOCOLOR}\n"
 ./make_intellij2020_3_use_jdk11.sh
 printf "${MSGCOLOR}Make IntelliJ2020.3 use JDK11: done${NOCOLOR}\n"
 
+printf "${MSGCOLOR}Install VSCode extensions...${NOCOLOR}\n"
+./make_intellij2020_3_use_jdk11.sh
+printf "${MSGCOLOR}Install VSCode extensions: done${NOCOLOR}\n"
+
+
 printf "${MSGCOLOR}INSTALLING ALL: COMPLETED SUCCESFULLY!!!${NOCOLOR}\n"
