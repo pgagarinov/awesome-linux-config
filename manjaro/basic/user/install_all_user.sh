@@ -1,11 +1,13 @@
 #!/bin/bash
 set -e
 MSGCOLOR=`tput setaf 3`
+MAIN_MSGCOLOR=`tput setaf 50`
 NOCOLOR=`tput sgr0`
 
 full_path=$(realpath $0)
 dir_path=$(dirname $full_path)
 
+printf "${MAIN_MSGCOLOR}------Installing user-specific packages...------${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing server stuff...${NOCOLOR}\n"
 $dir_path/install_server_stuff_user.sh
@@ -35,10 +37,5 @@ printf "${MSGCOLOR}Installing VSCode extensions...${NOCOLOR}\n"
 $dir_path/install_vscode_extensions.sh
 printf "${MSGCOLOR}Installing VSCode extensions: done${NOCOLOR}\n"
 
+printf "${MAIN_MSGCOLOR}------Installing user-specific packages: COMPLETED SUCCESSFULLY!------${NOCOLOR}\n"
 
-
-
-
-
-
-printf "${MSGCOLOR}INSTALLING ALL: COMPLETED SUCCESFULLY!!!${NOCOLOR}\n"

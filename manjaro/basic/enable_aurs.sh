@@ -8,12 +8,12 @@ if uname -r | grep 'MANJARO' > /dev/null; then
   # Install yay installer
   sudo pacman -S --noconfirm --needed yay
 else
- rm -rf ./yay-git
- git clone https://aur.archlinux.org/yay-git.git
- cd ./yay-git
+ rm -rf ./yay-bin
+ git clone https://aur.archlinux.org/yay-bin.git
+ cd ./yay-bin
  makepkg -si --noconfirm
  cd ..
- rm -rf ./yay-git
+ rm -rf ./yay-bin
 fi
 
 yay -S --noconfirm --needed pamac-cli

@@ -1,10 +1,13 @@
 #!/bin/sh
 set -e
+MAIN_MSGCOLOR=`tput setaf 48`
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
 
 full_path=$(realpath $0)
 dir_path=$(dirname $full_path)
+
+printf "${MAIN_MSGCOLOR}------Installing all system-wide packages...------${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing server components...${NOCOLOR}\n"
 $dir_path/install_server_stuff.sh
@@ -21,3 +24,5 @@ printf "${MSGCOLOR}Installing and configuring extras: done${NOCOLOR}\n"
 printf "${MSGCOLOR}Installing and configuring extras2...${NOCOLOR}\n"
 $dir_path/install_extras2.sh
 printf "${MSGCOLOR}Installing and configuring extras2: done${NOCOLOR}\n"
+
+printf "${MAIN_MSGCOLOR}------Installing all system-wide packages: SUCCESS!------${NOCOLOR}\n"

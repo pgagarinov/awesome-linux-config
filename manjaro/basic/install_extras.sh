@@ -1,33 +1,28 @@
 #!/bin/bash
 set -e
-#enable AUR in pamac
-sudo sed --in-place "s/#EnableAUR/EnableAUR/" "/etc/pamac.conf" 
-
-#Update system via Pacman
-sudo pacman -Syyuu
-
-# Install yay installer
-sudo pacman -S --noconfirm --needed yay
-
-#Updating yay packages
-yay -Syyuu --nocleanmenu --nodiffmenu --noconfirm
-
 # Install Brave Browser
 # sudo pacman -S --noconfirm --needed brave
 ## Brave was removed from the official repos:
 ## see https://forum.manjaro.org/t/brave-browser-update/44416/2
 
 # Install Zoom
-yay -Sy --noconfirm zoom
+yay -Sy --noconfirm --needed zoom
 
 # Install flatpak
 sudo pacman -S --noconfirm --needed flatpak
 
-# Install timeshift for local backups
-sudo pacman -S --noconfirm --needed timeshift
+
+if uname -r | grep 'MANJARO' > /dev/null; then
+  # Install timeshift for local backups
+  sudo pacman -S --noconfirm --needed timeshift
+else
+  yay -S --noconfirm --needed timeshift-bin
+fi
+
+
 
 # Bleachbit for cleaning the system
-sudo pacman -S --noconfirm bleachbit
+sudo pacman -S --noconfirm --needed bleachbit
 
 # Install Slack for Desktop
 yay -S --noconfirm --needed slack-desktop
