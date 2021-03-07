@@ -3,6 +3,6 @@ eamodio.gitlens
 ecmel.vscode-html-css
 julialang.language-julia
 ms-python.python
-rust-lang.rust
+matklad.rust-analyzer
 vadimcn.vscode-lldb
 yzhang.markdown-all-in-one
