@@ -37,5 +37,9 @@ printf "${MSGCOLOR}Installing VSCode extensions...${NOCOLOR}\n"
 $dir_path/install_vscode_extensions.sh
 printf "${MSGCOLOR}Installing VSCode extensions: done${NOCOLOR}\n"
 
+printf "${MSGCOLOR}Configure NeoVim...${NOCOLOR}\n"
+$dir_path/config_neovim.sh
+printf "${MSGCOLOR}Configure NeoVim: done${NOCOLOR}\n"
+
 printf "${MAIN_MSGCOLOR}------Installing user-specific packages: COMPLETED SUCCESSFULLY!------${NOCOLOR}\n"
 
