@@ -162,3 +162,6 @@ alias ltttt=' ls --tree -D -L 5 -I ${TREE_IGNORE}'
 # to fix the problem with colored-man-pages zsh plugin on Gnome and KDE
 export GROFF_NO_SGR=1 
 
+_zsh_cli_fg() { fg; }
+zle -N _zsh_cli_fg
+bindkey '^Z' _zsh_cli_fg
