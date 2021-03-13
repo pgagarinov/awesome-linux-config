@@ -21,7 +21,7 @@ yay -S --noconfirm --needed obs-studio
 yay -S --noconfirm --needed kdenlive
 
 # Diagramming Tool and Screenshot tool
-yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm drawio-desktop flameshot
+yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm drawio-desktop-bin flameshot
 
 # Github-Desktop
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm github-desktop-bin
