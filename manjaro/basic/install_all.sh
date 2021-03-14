@@ -9,9 +9,9 @@ dir_path=$(dirname $full_path)
 
 printf "${MAIN_MSGCOLOR}------Installing all system-wide packages...------${NOCOLOR}\n"
 
-printf "${MSGCOLOR}Installing server components...${NOCOLOR}\n"
-$dir_path/install_server_stuff.sh
-printf "${MSGCOLOR}Installing server components: done${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Installing all server packages...${NOCOLOR}\n"
+$dir_path/install_4server_all.sh
+printf "${MSGCOLOR}Installing all server packages: done${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n"
 $dir_path/install_powerlevel10k_fonts.sh

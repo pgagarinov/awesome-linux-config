@@ -2,17 +2,11 @@
 
 set -e
 
-# DBearver db client
-yay -S --noconfirm --needed dbeaver
-
-# pgAdming db client for PostgreSQL
-yay -S pgadmin4 --noconfirm --needed
-
-# Stack Haskell platform (dependency for ERD)
-yay -S --noconfirm --needed stack
-
 # Graphviz (Graph visualization tool)
 yay -S --noconfirm --needed graphviz
+
+# DBearver db client
+yay -S --noconfirm --needed dbeaver
 
 # Screen capturing software
 yay -S --noconfirm --needed obs-studio
@@ -28,9 +22,6 @@ yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm github-desktop-bin
 
 # Git-filter-repo
 yay -S --needed --nocleanmenu --nodiffmenu --noconfirm git-filter-repo
-
-# FAR for Linux
-yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm far2l-git
 
 #VLC media player
 yay -S --needed --nocleanmenu  --nodiffmenu --noconfirm vlc

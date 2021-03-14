@@ -81,4 +81,8 @@ printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
 printf "${MSGCOLOR}Updating packages one more time...${NOCOLOR}\n"
 $dir_path/update_all_via_pacman_or_yay.sh
 printf "${MSGCOLOR}Updating packages one more time: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Installing extras for server...${NOCOLOR}\n"
+$dir_path/install_server_extras.sh
+printf "${MSGCOLOR}Installing extras for server: done${NOCOLOR}\n"
 printf "${MAIN_MSGCOLOR}---Installing server-oriented system-wide dependencies: SUCCESS!---${NOCOLOR}\n"
