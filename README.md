@@ -5,11 +5,12 @@ The following scripts configure
 * Arch Linux/ Manjaro Linux as a workstation for Java, Python, Julia, Rust and JavaScript application development.
 * CentOS 7/CentOS 8 Linux as a server or a remote workstation
 
-All scripts install 
+*All scripts install *
 
 Java 8, 11, Maven, NodeJS, Docker, Docker Compose, Minikube, Miniconda, Jupyter Notebook/JupyterLab default configuration, zsh, OhMyZsh with powerlevel10k theme and a few very userful extensions, AWS cli v1, git, broot, fd-find, fzf, mc, far2l, tig, htop, mc, nano, screen, ncdu, tmux, exa, sk,  Rust, Allure commandline, 
 
-Additionally Arch Linux / Manjaro scripts install
+*Additionally Arch Linux / Manjaro scripts install*
+
 NeoVim configured for development in Rust language, Julia, Terminator, Kdenlive, OBStudio, Flameshot, Libre Office, IntelliJ Idea Ultimate Edition, PyCharm Professional, DataGrip, IntelliJ Webstorm, VSCode (+ extensions for Python, Rust, Julia, git and markdown), GitHub Desktop, DrawIO Desktop, Gimp, VLC, KeePassXC, Stack Haskell Platform, Graphviz, Erd, PgAdmin4, DBeaver, Slack, Zoom, Bleach, Filezilla Client, Skype, Krusader, Virt-viewer, Google Chrome, Firefox, Brave Browser, Geckodriver, Chrome Driver, Timeshift
 
 # How to install
