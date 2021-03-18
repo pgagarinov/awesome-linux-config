@@ -242,7 +242,7 @@ if __name__ == "__main__":
     if not __args.noconfirm and not confirm(
         "!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!\n"
         + "This tool should be used with caution as it modifies system\n"
-        + "parameters and iptable configuration, the changes are applyed to\n"
+        + "parameters and iptables configuration, the changes are applyed to\n"
         + "in-memory configurations only and will be lost after the systerm reboot.\n"
         + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
         + "Are you sure you want to continue?",
@@ -512,7 +512,7 @@ if __name__ == "__main__":
             if __args.nopersist or not confirm(
                 "!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!\n"
                 + "The next step modifies system parameters and\n"
-                + "iptable rules in a persistent way (the changes will be kept after system reboot)\n"
+                + "iptables rules in a persistent way (the changes will be kept after system reboot)\n"
                 + f"The following configuration file {sys_params_conf_file_name}\n"
                 + "with necessary system parameters will be created.\n"
                 + "After the file is created rolling back the changes will require\n"
