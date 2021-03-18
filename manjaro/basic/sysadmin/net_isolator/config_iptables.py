@@ -105,7 +105,7 @@ def parse_arguments() -> Arguments:
             + "\n"
             + "<scope> <protocol> <port(s)>\n"
             + "\n"
-            + f"here <scope> equals either to one of {SCOPE_NAMES_LIST},\n"
+            + f"here <scope> can be one of {SCOPE_NAMES_LIST},\n"
             + "<protocol> may be given by number or name (e.g. `tcp', `udp')\n"
             + "while <port(s)> contains either a single port or a port range\n"
             + "given as <start-port>:<end-port> or a comma-separated list of\n"
