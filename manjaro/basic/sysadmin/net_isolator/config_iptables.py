@@ -101,7 +101,7 @@ def parse_arguments() -> Arguments:
         "-p",
         help=(
             f"Path to profile file (DEFAULT VALUE: {Defaults.PROFILE_FILE}),\n"
-            + "this file should be simple text file with lines\nhaving the following format:\n"
+            + "this file should be a simple text file with lines\nhaving the following format:\n"
             + "\n"
             + "<scope> <protocol> <port(s)>\n"
             + "\n"
@@ -123,8 +123,8 @@ def parse_arguments() -> Arguments:
         "--nopersist",
         action="store_true",
         help=(
-            "Modify system parameters and iptables rules by the way not \n"
-            + "persisting between boots, may be used for validation,\n"
+            "Modify system parameters and iptables rules in a not persistent way\n"
+            + "(system reboot reverts the changes), may be used for validation,\n"
             + "if something goes wrong it is sufficient to reboot to\n"
             + "restore previous parameters\n\n"
         ),
@@ -133,10 +133,11 @@ def parse_arguments() -> Arguments:
         "--persist",
         action="store_true",
         help=(
-            "Modify system parameters and iptables rules with persistence\n"
-            + "between boots (in the case --noconfirm is passed while\n"
+            "Modify system parameters and iptables rules in a persistent way\n"
+            + "so that the changes are kept after system reboot.\n"
+            + "In the case --noconfirm is passed while\n"
             + "--nopersist is not passed, the behavior is the same as if\n"
-            + "--persist was given)\n\n"
+            + "--persist is given\n\n"
         ),
     )
     arg_parser.add_argument(
@@ -240,9 +241,9 @@ if __name__ == "__main__":
             sys.exit(1)
     if not __args.noconfirm and not confirm(
         "!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-        + "This tool should used very carefully because it modifies system\n"
-        + "parameters and iptables, the next steps are in-memory only, so\n"
-        + "that all the changes can be revoked by rebooting the computer\n"
+        + "This tool should be used with caution as it modifies system\n"
+        + "parameters and iptable configuration, the changes are applyed to\n"
+        + "in-memory configurations only and will be lost after the systerm reboot.\n"
         + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
         + "Are you sure you want to continue?",
         default=False,
@@ -263,7 +264,7 @@ if __name__ == "__main__":
                 + "may be continued only with the assumption that no additional\n"
                 + "ports (potentially given by this absent profile file) are to be\n"
                 + "allowed for external access, again currently only for in-memory\n"
-                + "changes, the latter can be revoked by rebooting the computer\n"
+                + "changes that will be lost after the system reboot.\n"
                 + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
                 + "Are you sure you want to continue with this assumption?",
                 default=False,
@@ -285,7 +286,7 @@ if __name__ == "__main__":
                     if len(val_list) != 3:
                         logger.fatal(
                             error_str
-                            + "It does not have enough parameters, see help for details"
+                            + "Not enough parameters, see help for details"
                         )
                         sys.exit(1)
                     port_info_dict = {}
