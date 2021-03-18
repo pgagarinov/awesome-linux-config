@@ -511,11 +511,12 @@ if __name__ == "__main__":
 
             if __args.nopersist or not confirm(
                 "!!!!!!!!!!!!!!!!!!!!!!!!!! ATTENTION !!!!!!!!!!!!!!!!!!!!!!!!!!\n"
-                + "The next step is to make the modified system parameters and\n"
-                + "iptables rules persistent between boots, to do this created are\n"
-                + f"{sys_params_conf_file_name} setting\n"
-                + "necessary system parameters (to rollback these changes you will\n"
-                + "need just to delete this file and to reboot the computer) and\n"
+                + "The next step modifies system parameters and\n"
+                + "iptable rules in a persistent way (the changes will be kept after system reboot)\n"
+                + f"The following configuration file {sys_params_conf_file_name}\n"
+                + "with necessary system parameters will be created.\n"
+                + "After the file is created rolling back the changes will require\n"
+                + "deleting this file and rebooting the system) and\n"
                 + f"{IPTABLES_RULES_FILE} with all modified iptables rules"
                 + (
                     "\n"
@@ -523,7 +524,7 @@ if __name__ == "__main__":
                     else f",\nold file {IPTABLES_RULES_FILE} will be copied to backup\n"
                     + f"file {iptables_rules_backup_file} (to rollback these\n"
                     + f"changes just replace new {IPTABLES_RULES_FILE} by\n"
-                    + f"{iptables_rules_backup_file} and reboot the computer)\n"
+                    + f"{iptables_rules_backup_file} and reboot the system)\n"
                 )
                 + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n"
                 + "Are you sure you really want to make the above changes?",
@@ -536,7 +537,7 @@ if __name__ == "__main__":
                 f.write(f"{sys_param_name} = {sys_param_val}\n")
         logger.info(
             f"Created {sys_params_conf_file_name}, if you need to rollback changed system parameters, "
-            + "just delete this file and reboot the computer"
+            + "just delete this file and reboot the system"
         )
 
         if iptables_rules_backup_file is not None:
@@ -544,7 +545,7 @@ if __name__ == "__main__":
             logger.info(
                 f"Copied old file {IPTABLES_RULES_FILE} to backup file {iptables_rules_backup_file}, "
                 + "if you need to rollback changed iptables rules, just replace "
-                + f"new {IPTABLES_RULES_FILE} by {iptables_rules_backup_file} and reboot the computer"
+                + f"new {IPTABLES_RULES_FILE} by {iptables_rules_backup_file} and reboot the system"
             )
 
         exec_shell_command(f"iptables-save > {IPTABLES_RULES_FILE}")
