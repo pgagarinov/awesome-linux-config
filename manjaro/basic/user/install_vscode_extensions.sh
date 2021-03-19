@@ -10,4 +10,7 @@ then
 	do
 	  code --install-extension $extension
 	done
+	echo '// Toggle between terminal and editor focus' >  ~/.config/"Code - OSS"/User/keybindings.json 
+	echo '[{ "key": "ctrl+`", "command": "workbench.action.terminal.focus"},' >>  ~/.config/"Code - OSS"/User/keybindings.json
+	echo '{ "key": "ctrl+`", "command": "workbench.action.focusActiveEditorGroup", "when": "terminalFocus"}]'>> ~/.config/"Code - OSS"/User/keybindings.json
 fi
