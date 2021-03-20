@@ -9,13 +9,13 @@ dir_path=$(dirname $full_path)
 
 printf "${MAIN_MSGCOLOR}------Installing all system-wide packages...------${NOCOLOR}\n"
 
-printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
-$dir_path/install_minikube.sh
-printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
-
 printf "${MSGCOLOR}Installing all server packages...${NOCOLOR}\n"
 $dir_path/install_4server_all.sh
 printf "${MSGCOLOR}Installing all server packages: done${NOCOLOR}\n\n"
+
+printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
+$dir_path/install_minikube.sh
+printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n"
 $dir_path/install_powerlevel10k_fonts.sh
