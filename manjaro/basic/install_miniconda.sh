@@ -1,6 +1,5 @@
 #!/bin/sh
 set -e
-yay -S --noconfirm --needed libffi6
 sudo rm -rf /opt/miniconda
 sudo rm -rf ~/.conda
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh

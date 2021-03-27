@@ -8,3 +8,4 @@ sudo pacman -S --noconfirm --needed mc ncdu
 sudo pacman -S --noconfirm --needed wget curl bind-tools rsync
 sudo pacman -S --noconfirm --needed unzip p7zip
 yay -S --noconfirm --needed --nocleanmenu --nodiffmenu neovim-plug
+yay -S --noconfirm --needed libffi6 # for miniconda
