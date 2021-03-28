@@ -166,4 +166,4 @@ _zsh_cli_fg() { fg; }
 zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
-DOCKER_BUILDKIT=1
+export DOCKER_BUILDKIT=1
