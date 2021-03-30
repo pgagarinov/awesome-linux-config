@@ -9,4 +9,5 @@ sudo usermod -aG docker $USER
 group=docker
 if [ $(id -gn) != $group ]; then
  exec sg $group "$0 $*"
-fsudo sh -c 'echo "{ \"features\" : { \"buildkit\": true} }" > /etc/docker/daemon.json'i
+fi
+sudo sh -c 'echo "{ \"features\" : { \"buildkit\": true} }" > /etc/docker/daemon.json'i
