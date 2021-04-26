@@ -1,3 +1,3 @@
 #!/bin/bash
 set -e
-yay -S --noconfirm --needed julia
+yay -S --noconfirm --needed julia-bin
