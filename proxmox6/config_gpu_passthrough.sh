@@ -11,6 +11,9 @@
 #
 # 3. Make sure that IOMMU Interrupt Remapping (a feature of VT-d) is enabled in BIOS,
 #    Follow https://pve.proxmox.com/wiki/Pci_passthrough#IOMMU_Interrupt_Remapping to check that IOMMU interrup remapping is enabled
+#    Double-check that IOMMU is enabled via running `dmesg | grep -e DMAR -e IOMMU -e AMD-Vi`
+#    See https://forum.proxmox.com/threads/pci-passthrough-no-iommu-detected.67504/ for troubleshooting
+
 #
 # 4. Verify IOMMU Isolation, (some PCIe slots on some motherboards can be shared with other devices). The passed-through PCIe device need to have an isolated group
 #    Follow https://pve.proxmox.com/wiki/Pci_passthrough#Verify_IOMMU_Isolation
