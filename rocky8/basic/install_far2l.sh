@@ -7,7 +7,7 @@ sudo dnf -y install gawk m4 glib2-devel wxGTK3-devel cmake gcc-c++ git
 
 sudo dnf -y install dnf-plugins-core
 sudo dnf -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
-sudo dnf config-manager --set-enabled PowerTools
+sudo dnf config-manager --set-enabled powertools
 
 
 sudo dnf -y install libssh-devel
@@ -18,6 +18,7 @@ sudo dnf -y install python3-devel
 sudo dnf -y install virtualenv
 sudo dnf -y install openssl-devel
 sudo dnf -y install neon-devel
+sudo dnf -y install uchardet
 
 rm -rf ./far2l
 git clone https://github.com/elfmz/far2l
