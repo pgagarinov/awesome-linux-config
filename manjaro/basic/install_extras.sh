@@ -61,7 +61,7 @@ yay -S --noconfirm --needed virt-viewer
 
 # Virt manager is UI app for managing KVM VMs
 # https://wiki.manjaro.org/index.php?title=Virt-manager
-sudo pacman -S --noconfirm --needed virt-manager qemu vde2 ebtables dnsmasq bridge-utils openbsd-netcat
+sudo pacman -S --noconfirm --needed virt-manager qemu vde2 dnsmasq bridge-utils openbsd-netcat
 sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 sudo usermod -aG libvirt $USER
