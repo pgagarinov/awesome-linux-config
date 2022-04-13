@@ -1,4 +1,4 @@
-# Awesome Linux Configuration Scripts for Arch Linux, Manjaro, CentOS 7 and CentOS 8
+# Awesome Linux Configuration Scripts for Arch Linux, Manjaro, CentOS 7 and Rocky Linux 8
 A curated set of awesome configuration scripts for various Linux-based systems.
 
 The following scripts configure 
