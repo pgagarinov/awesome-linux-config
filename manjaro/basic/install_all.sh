@@ -13,9 +13,9 @@ printf "${MSGCOLOR}Installing all server packages...${NOCOLOR}\n"
 $dir_path/install_4server_all.sh
 printf "${MSGCOLOR}Installing all server packages: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing MiniKube...${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing k3d...${NOCOLOR}\n"
 $dir_path/install_k3d.sh
-printf "${MSGCOLOR}Installing MiniKube: done${NOCOLOR}\n"
+printf "${MSGCOLOR}Installing k3d: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}Installing and configuring Powerlevel10k fonts...${NOCOLOR}\n"
 $dir_path/install_powerlevel10k_fonts.sh

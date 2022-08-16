@@ -36,8 +36,9 @@ yay -S --noconfirm --needed skypeforlinux-stable-bin
 
 # Install PyCharm professional (should be the latest)
 sudo pacman -S --noconfirm --needed xdg-utils
-yay -S --noconfirm --needed pycharm-professional
-#flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
+yay -S --noconfirm --needed pycharm-community-edition
+# yay -S --noconfirm --needed pycharm-professional
+# flatpak install -y --user flathub com.jetbrains.PyCharm-Professional
 
 # Cool file manager
 sudo pacman -S --noconfirm --needed krusader
@@ -66,14 +67,15 @@ sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 sudo usermod -aG libvirt $USER
 
-#Install Intellij Ultimate
+#Install Intellij Community
+yay -S --noconfirm --needed intellij-idea-community-edition
 #flatpak install -y --user flathub com.jetbrains.IntelliJ-IDEA-Ultimate
-yay -S --noconfirm --needed webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
-yay -S --noconfirm --needed intellij-idea-ultimate-edition
+#yay -S --noconfirm --needed webstorm-jre #https://medium.com/@julianvargkim/how-to-fix-tried-to-user-preview-panel-provider-javafx-webview-error-on-linux-manjaro-ac5b6326ee1a
+#yay -S --noconfirm --needed intellij-idea-ultimate-edition
 
 #Install DataGrip
 #flatpak install -y --user flathub com.jetbrains.DataGrip
-yay -S --noconfirm --needed datagrip
+#yay -S --noconfirm --needed datagrip
 
 
 #Install Google Chrome

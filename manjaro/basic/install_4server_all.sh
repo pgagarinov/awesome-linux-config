@@ -58,9 +58,9 @@ printf "${MSGCOLOR}Installing and setting up git...${NOCOLOR}\n"
 $dir_path/install_setup_git.sh
 printf "${MSGCOLOR}Installing and setting up git: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing and setting up miniconda...${NOCOLOR}\n"
-$dir_path/install_miniconda.sh
-printf "${MSGCOLOR}Installing and setting up miniconda: done...${NOCOLOR}\n\n"
+printf "${MSGCOLOR}Installing and setting up micromamba...${NOCOLOR}\n"
+$dir_path/install_micromamba.sh
+printf "${MSGCOLOR}Installing and setting up micromamba: done...${NOCOLOR}\n\n"
 
 printf "${MSGCOLOR}Installing docker...${NOCOLOR}\n"
 $dir_path/install_docker.sh
