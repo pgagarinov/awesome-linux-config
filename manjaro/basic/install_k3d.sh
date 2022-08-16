@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
-sudo pacman -S --noconfirm --needed minikube
 sudo pacman -S --noconfirm --needed kubectl
+yay -S --noconfirm --needed rancher-k3d-bin
 
 ## Check that minikube works as expected
 
@@ -10,9 +10,3 @@ group=docker
 if [[ $(id -gn) != $group ]]; then
  exec sg $group "$0 $*"
 fi
-
-minikube delete
-minikube start
-minikube stop
-
-## type `minikube dashboard` or `minikube dashboard --url` to start Kubernetes dashboard
