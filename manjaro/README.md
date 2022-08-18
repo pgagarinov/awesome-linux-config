@@ -7,7 +7,7 @@
 	```
 ## 2. Clone this repository
 	```bash
-	git clone git@github.com:Alliedium/awesome-inux-config.git
+	git clone https://github.com/Alliedium/awesome-linux-config.git
 	```
 
 ## 3. Run system-wide scripts from basic folder and reboot
