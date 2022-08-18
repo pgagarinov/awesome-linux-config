@@ -1,42 +1,33 @@
 # Instructions
 
-Please follow the steps below:
-1. [**Important** ]Update the system
-	```bash
+## 1. Update system and reboot
+	```
 	sudo pacman -Syyuu
+    sudo reboot now
 	```
-2. [**Important** ] After successfully updates reboot the system
-	```bash 
-	 reboot
-	 ```
-3.  Clone this repository
+## 2. Clone this repository
 	```bash
-	git clone https://github.com/emptyshell/centos-config.git
+	git clone git@github.com:Alliedium/awesome-inux-config.git
 	```
-4.  Navigate to the **basic** folder
-	```bash
-	cd centos-config/manjaro19/basic/
-	```
-5.  Run the **install_all.sh**
-	```bash
-	 ./install_all.sh
-	 ```
-6.  After the script run reboot the system
-	```bash
-	reboot
-	```
-## Install antivirus
-There is an antivirus install script that is not included in **install_all.sh**
-* To execute the **install_eset_nod32.sh** run:
 
+## 3. Run system-wide scripts from basic folder and reboot
 	```bash
-        cd centos-config/manjaro19
-	./install_eset_nod32.sh
+	cd awesome-inux-config/manjaro/basic/
+    ./install_all.sh
+    # make sure the script above runs till the end!!!
+    sudo reboot now
 	```
-	
-* And follow the graphical interface as in this [guide](https://support.eset.com/en/kb2653-download-and-install-eset-nod32-antivirus-4-for-linux-desktop)
 
-* After the script run reboot the system
+## 4. Change your shell to zsh and login/logout
 	```bash
-	reboot
+	cd awesome-inux-config/manjaro/basic/sysadmin
+    ./change_to_zsh.sh
+    # login and logout
+	```
+## 5. Install user-specific scripts
+	```bash
+	cd awesome-inux-config/manjaro/user
+    ./install_all_user.sh
+    # make sure the script above runs till the end!!!
+    sudo reboot now
 	```
