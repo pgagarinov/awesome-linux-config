@@ -37,6 +37,17 @@
     # login and logout
 	```
 ## 5. Install user-specific scripts
+
+### For server
+	```bash
+	cd awesome-linux-config/manjaro/basic/user
+    ./install_server_stuff_user.sh
+    # make sure the script above runs till the end!!!
+    sudo reboot now
+	```
+
+### For workstation
+
 	```bash
 	cd awesome-linux-config/manjaro/basic/user
     ./install_all_user.sh
