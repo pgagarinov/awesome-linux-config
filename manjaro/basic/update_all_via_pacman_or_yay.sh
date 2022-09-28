@@ -4,6 +4,10 @@ set -e
 MSGCOLOR=`tput setaf 4`
 NOCOLOR=`tput sgr0`
 
+
+sudo pacman -S --noconfirm pacman-mirrors 
+sudo pacman-mirrors --geoip
+
 if ! [ -x "$(command -v yay)" ]; then
   printf "${MSGCOLOR}Updating via pacman...${NOCOLOR}\n"
   sudo pacman -Syyuu --noconfirm --needed
