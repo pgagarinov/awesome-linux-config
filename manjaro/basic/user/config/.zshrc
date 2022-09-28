@@ -167,3 +167,6 @@ zle -N _zsh_cli_fg
 bindkey '^Z' _zsh_cli_fg
 
 export DOCKER_BUILDKIT=1
+
+export PATH="${PATH}:${HOME}/.krew/bin"
+
