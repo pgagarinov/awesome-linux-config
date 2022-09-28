@@ -6,7 +6,7 @@ NOCOLOR=`tput sgr0`
 
 
 sudo pacman -S --noconfirm pacman-mirrors 
-sudo pacman-mirrors --geoip
+sudo pacman-mirrors --country Germany
 
 if ! [ -x "$(command -v yay)" ]; then
   printf "${MSGCOLOR}Updating via pacman...${NOCOLOR}\n"
