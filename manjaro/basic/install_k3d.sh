@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 sudo pacman -S --noconfirm --needed kubectl
+yay -S --noconfirm --needed krew-bin
 yay -S --noconfirm --needed rancher-k3d-bin
 
 ## Check that minikube works as expected
