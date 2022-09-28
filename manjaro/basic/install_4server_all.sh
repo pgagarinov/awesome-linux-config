@@ -18,10 +18,6 @@ printf "${MSGCOLOR}Removing Canonical stuff...${NOCOLOR}\n"
 $dir_path/remove_canonical_stuff.sh
 printf "${MSGCOLOR}Removing Canonical stuff: done${NOCOLOR}\n\n"
 
-#printf "${MSGCOLOR}Selecting fastest mirrors and updating packages...${NOCOLOR}\n"
-#./select_mirrors_and_update.sh
-#printf "${MSGCOLOR}Selecting fastest mirrors and updating packages: done${NOCOLOR}\n"
-
 printf "${MSGCOLOR}Updating packages...${NOCOLOR}\n"
 $dir_path/update_all_via_pacman_or_yay.sh
 printf "${MSGCOLOR}Updating packages: done${NOCOLOR}\n"
