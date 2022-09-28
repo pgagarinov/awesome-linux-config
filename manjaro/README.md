@@ -11,12 +11,24 @@
 	```
 
 ## 3. Run system-wide scripts from basic folder and reboot
+
+### For server
+
+	```bash
+	cd awesome-linux-config/manjaro/basic/
+    ./install_4server_all.sh
+    # make sure the script above runs till the end!!!
+    sudo reboot now
+	```
+### For workstation
+
 	```bash
 	cd awesome-linux-config/manjaro/basic/
     ./install_all.sh
     # make sure the script above runs till the end!!!
     sudo reboot now
-	```
+	```	
+	
 
 ## 4. Change your shell to zsh and login/logout
 	```bash
