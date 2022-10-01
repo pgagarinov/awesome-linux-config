@@ -18,8 +18,12 @@ printf "${MSGCOLOR}Configuring Diff so Fancy...${NOCOLOR}\n"
 $dir_path/config_diff_so_fancy.sh
 printf "${MSGCOLOR}Configuring Diff so Fancy: done${NOCOLOR}\n\n"
 
-printf "${MSGCOLOR}Installing and configuring git...${NOCOLOR}\n"
+printf "${MSGCOLOR}Configuring git...${NOCOLOR}\n"
 $dir_path/config_git.sh
-printf "${MSGCOLOR}Installing and configuring git: done${NOCOLOR}\n"
+printf "${MSGCOLOR}Configuring git: done${NOCOLOR}\n"
+
+printf "${MSGCOLOR}Configuring tig...${NOCOLOR}\n"
+$dir_path/config_tig.sh
+printf "${MSGCOLOR}Configuring tig: done${NOCOLOR}\n"
 
 printf "${MSGCOLOR}INSTALLING SERVER STUFF: COMPLETED SUCCESSFULLY!!!${NOCOLOR}\n"
