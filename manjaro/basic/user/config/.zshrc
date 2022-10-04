@@ -27,7 +27,9 @@ export FZF_DEFAULT_OPTS="--no-mouse --height 90% -1 --reverse --multi --inline-i
 
 # Change find backend
 # Use 'git ls-files' when inside GIT repo, or fd otherwise
-export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l $FD_OPTIONS"
+if which git &> /dev/null && which fd &> /dev/null; then
+ export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard | fd --type f --type l $FD_OPTIONS"
+fi
 
 # Find commands for "Ctrl+T" and "Opt+C" shortcuts
 export FZF_CTRL_T_COMMAND="fd $FD_OPTIONS"
@@ -138,26 +140,27 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $HOME/.config/broot/launcher/bash/br
+if which $HOME/.config/broot/launcher/bash/br &> /dev/null; then
+ source $HOME/.config/broot/launcher/bash/br
+fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-alias ll='ls -al'
-
 alias sudo='sudo ' #this allows to use `sudo ll`
 
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
-
-alias ls=' exa --group-directories-first'
+if type exa %>/dev/null > /dev/null; then                                                                                      ⇣789 B/s ⇡1.34 KiB/s 10.44.108.11  
+ alias ls=' exa --group-directories-first'
+ alias ll=' ls --git -l'
+ alias lt=' ls --tree -D -L 2 -I ${TREE_IGNORE}'
+ alias ltt=' ls --tree -D -L 3 -I ${TREE_IGNORE}'
+ alias lttt=' ls --tree -D -L 4 -I ${TREE_IGNORE}'
+ alias ltttt=' ls --tree -D -L 5 -I ${TREE_IGNORE}'
+fi
 alias la=' ls -a'
-alias ll=' ls --git -l'
-alias lt=' ls --tree -D -L 2 -I ${TREE_IGNORE}'
-alias ltt=' ls --tree -D -L 3 -I ${TREE_IGNORE}'
-alias lttt=' ls --tree -D -L 4 -I ${TREE_IGNORE}'
-alias ltttt=' ls --tree -D -L 5 -I ${TREE_IGNORE}'
 
 # to fix the problem with colored-man-pages zsh plugin on Gnome and KDE
 export GROFF_NO_SGR=1 

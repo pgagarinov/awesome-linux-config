@@ -1,7 +1,9 @@
 #!/bin/zsh
 set -e
 
-broot --install
+if which broot &>/dev/null; then
+  broot --install
+fi
 
 # Configure git to use d-s-f for *all* diff operations
 echo "config diff so fancy paget in git"
