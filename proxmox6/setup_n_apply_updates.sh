@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 sed -i "s/deb/#deb/" /etc/apt/sources.list.d/pve-enterprise.list
-grep -q "pve-no-subscription" /etc/apt/sources.list|| echo "deb http://download.proxmox.com/debian/pve buster pve-no-subscription" >> /etc/apt/sources.list
+grep -q "pve-no-subscription" /etc/apt/sources.list|| echo "deb http://download.proxmox.com/debian/pve bullseye pve-no-subscription" >> /etc/apt/sources.list
 apt update
 apt full-upgrade -y
 pveam update
