@@ -1,9 +1,3 @@
-https://pve.proxmox.com/wiki/Migration_of_servers_to_Proxmox_VE#Clonezilla_Live_CDs
-https://forum.proxmox.com/threads/hyper-v-gen-2-windows-guest-conversion.38954/
-https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html
-https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
-
-
 # 1. Create a target Machine with 
 - IDE disk with writeback cache enabled
 - QEMU agent activated
@@ -34,3 +28,8 @@ and install both the drivers and QEMU agent
 
 # 6. Install Spice server and client (this is like RDP in Windows but better) 
 - Follow the steps from https://pve.proxmox.com/wiki/SPICE
+# References
+- https://pve.proxmox.com/wiki/Migration_of_servers_to_Proxmox_VE#Clonezilla_Live_CDs
+- https://forum.proxmox.com/threads/hyper-v-gen-2-windows-guest-conversion.38954/
+- https://docs.fedoraproject.org/en-US/quick-docs/creating-windows-virtual-machines-using-virtio-drivers/index.html
+- https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso
