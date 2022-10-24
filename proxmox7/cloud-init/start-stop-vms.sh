@@ -37,7 +37,9 @@ do
 
    msg="${MSGCOLOR}$status_msg VM $i_vm with ID=${vm_cur_id} on node $target_node${NOCOLOR}"
    printf "${msg}...\n"
-   pvesh create /nodes/$target_node/qemu/$vm_cur_id/status/$vm_status2set
+   if grep -q "\"${vm_cur_id}\"" /etc/pve/.vmlist ; then
+     pvesh create /nodes/$target_node/qemu/$vm_cur_id/status/$vm_status2set
+   fi
    printf "${msg}: done\n"
 done
 

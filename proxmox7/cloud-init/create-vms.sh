@@ -5,7 +5,7 @@ MAIN_MSGCOLOR=`tput setaf 48`
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
 
-main_msg="${MAIN_MSGCOLOR}=======Multiplying VMs${NOCOLOR}"
+main_msg="${MAIN_MSGCOLOR}=======Create VMs${NOCOLOR}"
 printf "${main_msg}...\n"
 
 eval "target_node_list=$Pz_TARGET_NODE_LIST"
@@ -21,7 +21,7 @@ do
    printf "$msg: done\n"
    msg="${MSGCOLOR}Setting params${NOCOLOR}"
    printf "$msg...\n"
-   qm set ${vm_cur_id}  --ipconfig0 ip=${vm_cur_ip}/24,gw=${Pz_VM_GATEWAY}
+   qm set ${vm_cur_id}  --ipconfig0 ip=${vm_cur_ip}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
    printf "$msg: done\n"
    target_node=${target_node_list[i_vm-1]}
    if [ `hostname` != ${target_node} ]; then

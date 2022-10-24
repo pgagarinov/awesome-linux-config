@@ -15,9 +15,9 @@
 ## 5. Download cloud init images
 - `./download-cloud-init-images.sh` 
 ## 6. Create VM template
-- `./create-initial-vm-template.sh`
+- `./create-template.sh`
 ## 7. Clone VMs across different nodes
-- `./multiply-vm.sh`
+- `./create-vms.sh`
 ## 8. Start all the cloned VMs
 - `./start-stop-vms.sh start`
 
@@ -28,11 +28,22 @@
 - `./destroy-vms.sh`
 
 ## 11. Destroy the VM template (Optional)
-- `./destroy-initial-vm-template.sh`
+- `./destroy-template.sh`
 
+# Batch commands
+## 1. Create the template, create and start VMs
+```
+./batch-create-start.sh
+```
+
+## 2. Stop and destroy the VMs, then destroy the template
+
+```
+./batch-stop-destroy.sh
+```
 # Tests
-You can run a happy-path test via `./test-happy-path.sh`. The test basically performs the full cycle of VM creation and destruction.
-
+- `./test-happy-path-granular.sh` - this test basically performs the full cycle of VM creation and destruction.
+- `./test-happy-path-batch.sh` - this test verifies batch scripts.
 # Other OSS Proxmox tools
 The scripts above are intended for creating 1 standard VM on every PVE. This can have many application, setting up VMs for K8s Cluster is one of them. 
 If you are interested in automation for PVE - have a look at

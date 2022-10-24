@@ -12,5 +12,7 @@ NOCOLOR=`tput sgr0`
 
 main_msg="${MAIN_MSGCOLOR}========Destroying VM Template with ID=${Pz_VM_TEMPLATE_ID}${NOCOLOR}"
 printf "$main_msg...\n"
-qm destroy $Pz_VM_TEMPLATE_ID --destroy-unreferenced-disks --purge
+if grep -q "\"${Pz_VM_TEMPLATE_ID}\"" /etc/pve/.vmlist ; then
+  qm destroy $Pz_VM_TEMPLATE_ID --destroy-unreferenced-disks --purge
+fi
 printf "$main_msg: done\n"
