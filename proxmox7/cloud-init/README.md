@@ -9,9 +9,8 @@ Use either ssh or "Shell" in PVE Web UI
 ## 4. Download cloud init images
 Run `./download-cloud-init-images.sh` to download cloud images. Feel free to edit the script to add links to cloud images of your own
 ## 5. Create VM template
-- Copy `./create-init-vm-ubuntu-jammy.sh` to `create-init-vm-my-case.sh`
 - Modify constants in the header of the script to match your case
-- Run `./create-init-vm-my-case.sh`
+- Run `./create-initial-vm-template.sh`
 ## 6. Clone VMs across different nodes
 - Modify constants in the header of the script to match your case
 - Run `./multiply-vm.sh`

@@ -8,7 +8,7 @@ NOCOLOR=`tput sgr0`
 main_msg="${MAIN_MSGCOLOR}=======Multiplying VMs${NOCOLOR}"
 printf "${main_msg}...\n"
 DATA_STORAGE_ID=xpool_vmstorage
-VM_NAME_PREFIX=ubuntu-e10v9
+VM_NAME_PREFIX=vm-clone-
 #POOL_ID=infra-e10v9
 POOL_ID=terra-pool      # <== POOL IS EXPECTED TO EXIST, IT IS NOT CREATED AUTOMATICALLY !!!
 IMG_FILE_NAME=/root/jammy-server-cloudimg-amd64.img
@@ -29,7 +29,7 @@ TARGET_NODE_LIST=(px2-sandbox-1 px2-sandbox-2)
 for i_vm in $(seq $N_VMS)
 do
    vm_cur_id=${VM_ID_PREFIX}${i_vm}
-   vm_cur_name=${VM_NAME_PREFIX}-${i_vm}
+   vm_cur_name=${VM_NAME_PREFIX}${i_vm}
    vm_cur_ip=${VM_IP_PREFIX}${i_vm}
    msg="${MSGCOLOR}Creating VM $i_vm with ID=${vm_cur_id} and NAME=${vm_cur_name} and IP=${vm_cur_ip}${NOCOLOR}"
    printf "$msg..\n"

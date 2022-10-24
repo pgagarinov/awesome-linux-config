@@ -8,10 +8,11 @@ NOCOLOR=`tput sgr0`
 main_msg="${MAIN_MSGCOLOR}======Creating VM template${NOCOLOR}"
 printf "$main_msg...\n"
 CLOUD_INIT_IMAGE_DIR=/root/cloud-init-images
-VM_NAME=ubuntu-shared-0
+VM_NAME=vm-template-0
 #POOL_ID=infra-e10v9
 POOL_ID=terra-pool
 IMG_FILE_NAME=$CLOUD_INIT_IMAGE_DIR/jammy-server-cloudimg-amd64.img
+#IMG_FILE_NAME=$CLOUD_INIT_IMAGE_DIR/Fedora-Cloud-Base-36-1.5.x86_64.qcow2
 VM_ID=7000
 USER_NAME=suser
 USER_PW=superpw
@@ -36,8 +37,8 @@ DATA_STORAGE_ID=px2-1-nfs
 DISK_FORMAT='qcow2'
 #DISK_FORMAT='raw'
 #
-DISK_SIZE_INCREASE=+1G # <== ONLY POSITIVE VALUES
-#DISK_SIZE_INCREASE=   # <== LEAVE EMPTY TO DISABLE DISK RESIZE !!!
+#DISK_SIZE_INCREASE=+1G # <== ONLY POSITIVE VALUES
+DISK_SIZE_INCREASE=   # <== LEAVE EMPTY TO DISABLE DISK RESIZE !!!
 #
 NET_BRIDGE=vmbr0       # <== EXPECTED TO EXIST !!!
 #NET_BRIDGE=e10v9
