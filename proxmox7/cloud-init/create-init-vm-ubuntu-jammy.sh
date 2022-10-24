@@ -36,10 +36,10 @@ DATA_STORAGE_ID=px2-1-nfs
 DISK_FORMAT='qcow2'
 #DISK_FORMAT='raw'
 #
-#DISK_SIZE_INCREASE=+1G # <== LEAVE EMPTY TO DISABLE DISK RESIZE !!!
-DISK_SIZE_INCREASE=
+DISK_SIZE_INCREASE=+1G # <== ONLY POSITIVE VALUES
+#DISK_SIZE_INCREASE=   # <== LEAVE EMPTY TO DISABLE DISK RESIZE !!!
 #
-NET_BRIDGE=vmbr0
+NET_BRIDGE=vmbr0       # <== EXPECTED TO EXIST !!!
 #NET_BRIDGE=e10v9
 RAM=4096  # <== IN MEBIBYTES !!!
 VCPU=12
@@ -55,20 +55,14 @@ printf "$msg...\n"
 modified_img_file_name=${IMG_FILE_NAME}.mod
 cp $IMG_FILE_NAME $modified_img_file_name
 printf "$msg: done\n"
-
-
-msg="${MSGCOLOR}Resizing the disk image \"${modified_img_file_name}\"${NOCOLOR}"
-printf "$msg...\n"
+#
 if [ ! -z "$DISK_SIZE_INCREASE" ]
 then
+  msg="${MSGCOLOR}Resizing the disk image \"${modified_img_file_name}\" by $DISK_SIZE_INCREASE${NOCOLOR}"
+  printf "$msg...\n"
   qemu-img resize $modified_img_file_name $DISK_SIZE_INCREASE
+  printf "$msg: done\n"
 fi
-
-printf "$msg: done\n"
-#
-# sometimes it is necessary to increase VMs disk size
-# if so - please run
-# qemu-img resize $IMG_FILE_NAME +1G
 #
 if [ "$DISK_FORMAT" == 'raw' ]; then
   import_disk_cmd_suffix=""
