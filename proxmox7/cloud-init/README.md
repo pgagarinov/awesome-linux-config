@@ -23,7 +23,7 @@
 ## 9. Stop all the cloned VMs (Optional)
 - `./start-stop-vms.sh stop`
 
-## 10. Destroy the all the clone VMs (Optional) 
+## 10. Destroy all the cloned VMs (Optional) 
 - `./destroy-vms.sh`
 
 ## 11. Destroy the VM template (Optional)
