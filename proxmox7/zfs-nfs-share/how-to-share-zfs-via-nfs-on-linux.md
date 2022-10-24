@@ -7,6 +7,7 @@
 
 # Long story short:
 ## On the server (Debian, Proxmox)
-sudo apt install -y nfs-kernel-server
-zfs create xpool/nfs-storage
-zfs set sharenfs="rw=@10.115.177.0/24,no_root_squash" xpool/nfs-storage
+Run
+1. `sudo apt install -y nfs-kernel-server`
+2. `zfs create xpool/nfs-storage`
+3. `zfs set sharenfs="rw=@10.115.177.0/24,no_root_squash" xpool/nfs-storage`
