@@ -4,13 +4,14 @@
 - Use either ssh or "Shell" in PVE Web UI
 
 ## 2. Clone this repo and cd to this folder
-- `git clone https://github.com/Alliedium/awesome-linux-config.git`
-- `cd ./awesome-linux-config/proxmox7/cloud-init`
+- Install git if missing: `apt install git`
+- Clone the repo: `git clone https://github.com/Alliedium/awesome-linux-config.git`
+- Change you current directory: `cd ./awesome-linux-config/proxmox7/cloud-init`
 ## 3. Copy the configuration and adjust it to match your case 
-- `cp ./.env.example ./.env.my-case`
+- Copy the config `cp ./.env.example ./.env.my-case`
 - Adjust the parameters (with self-explanatory names) inside `./.env.my-case` to match your PVE configuration.
 ## 4. Export variables from your configuration
- - `set -a; source ./.env.my-case; set +a`
+ - Export environment variables from your env file: `set -a; source ./.env.my-case; set +a`
 ## 5. Download cloud init images
 - `./download-cloud-init-images.sh` 
 ## 6. Create VM template
