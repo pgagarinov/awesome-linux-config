@@ -29,6 +29,9 @@
 ## 11. Destroy the VM template (Optional)
 - `./destroy-initial-vm-template.sh`
 
+# Tests
+You can run a happy-path test via `./test-happy-path.sh`. The test basically performs the full cycle of VM creation and destruction.
+
 # Other OSS Proxmox tools
 The scripts above are intended for creating 1 standard VM on every PVE. This can have many application, setting up VMs for K8s Cluster is one of them. 
 If you are interested in automation for PVE - have a look at
