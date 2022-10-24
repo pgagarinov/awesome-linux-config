@@ -17,7 +17,7 @@ USER_NAME=suser
 USER_PW=superpw
 USER_PUB_KEY_FILE_NAME=/root/.ssh/id_rsa_cloudinit.pub
 # Please avoid using incompatible combinations of storages and disk formats,
-# some storages (marked with "block" in https://pve.proxmox.com/wiki/Storage) 
+# some storages (marked with "block" in https://pve.proxmox.com/wiki/Storage)
 # do not support "qcow2" disk format
 # ============================
 #   storage vs format cheatsheet:
@@ -36,15 +36,34 @@ DATA_STORAGE_ID=px2-1-nfs
 DISK_FORMAT='qcow2'
 #DISK_FORMAT='raw'
 #
+#DISK_SIZE_INCREASE=+1G # <== LEAVE EMPTY TO DISABLE DISK RESIZE !!!
+DISK_SIZE_INCREASE=
+#
 NET_BRIDGE=vmbr0
 #NET_BRIDGE=e10v9
-RAM=4096
+RAM=4096  # <== IN MEBIBYTES !!!
 VCPU=12
 #
 msg="${MSGCOLOR}Creating VM${NOCOLOR}"
 printf "$msg...\n"
-# mtu=1 means use host's MTU for the corresponding bridge
+# mtu=1 means use MTU of the host's bridge for the corresponding bridge
 qm create $VM_ID --memory $RAM --cores $VCPU  --name $VM_NAME --net0 virtio,bridge=$NET_BRIDGE,mtu=1 --pool $POOL_ID
+printf "$msg: done\n"
+
+msg="${MSGCOLOR}Making a copy of the disk image \"${IMG_FILE_NAME}\"${NOCOLOR}"
+printf "$msg...\n"
+modified_img_file_name=${IMG_FILE_NAME}.mod
+cp $IMG_FILE_NAME $modified_img_file_name
+printf "$msg: done\n"
+
+
+msg="${MSGCOLOR}Resizing the disk image \"${modified_img_file_name}\"${NOCOLOR}"
+printf "$msg...\n"
+if [ ! -z "$DISK_SIZE_INCREASE" ]
+then
+  qemu-img resize $modified_img_file_name $DISK_SIZE_INCREASE
+fi
+
 printf "$msg: done\n"
 #
 # sometimes it is necessary to increase VMs disk size
@@ -66,7 +85,7 @@ fi
 printf "${MSGCOLOR}Using DISK_FORMAT=$DISK_FORMAT${NOCOLOR}\n"
 msg="${MSGCOLOR}Adding suffix $import_disk_cmd_suffix to qm import command${NOCOLOR}"
 printf "$msg...\n"
-qm importdisk $VM_ID $IMG_FILE_NAME $DATA_STORAGE_ID $import_disk_cmd_suffix
+qm importdisk $VM_ID $modified_img_file_name $DATA_STORAGE_ID $import_disk_cmd_suffix
 printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Attaching disk to VM using disk_path=${after_import_disk_path}${NOCOLOR}"

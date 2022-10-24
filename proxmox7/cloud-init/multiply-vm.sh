@@ -10,18 +10,20 @@ printf "${main_msg}...\n"
 DATA_STORAGE_ID=xpool_vmstorage
 VM_NAME_PREFIX=ubuntu-e10v9
 #POOL_ID=infra-e10v9
-POOL_ID=terra-pool
+POOL_ID=terra-pool      # <== POOL IS EXPECTED TO EXIST, IT IS NOT CREATED AUTOMATICALLY !!!
 IMG_FILE_NAME=/root/jammy-server-cloudimg-amd64.img
 #VM_SOURCE_ID=6000
 VM_SOURCE_ID=7000
 #VM_ID_PREFIX=601
-VM_ID_PREFIX=701
-#CLONE_FLAG=--full
+VM_ID_PREFIX=701        # <== PREFIX 701 WOULD PRODUCE VM ids 7011, 7012, ... !!!
+#CLONE_FLAG=--full      # <== LEAVE EMPTY FOR A LINKED CLONE !!!
 CLONE_FLAG=
-VM_IP_PREFIX=10.109.1.1
+VM_IP_PREFIX=10.109.1.1 # <== 10.1.2.3 PREFIX WOULD RESULT IN IPs 10.1.2.31, 10.1.2.32, ... !!!
 VM_GATEWAY=10.109.1.1
-N_VMS=2
+N_VMS=2                 # <== SHOLD MATCH THE LENGTH OF TARGET_NODE_LIST !!!
 #TARGET_NODE_LIST=(arctic16 arctic20)
+#                         <== REPEATE THE NAME OF A SINGLE NODE MULTIPLE TYPES
+#                         <== TO CREATE MULTIPLE CLONES ON A SINGLE NODE !!!
 TARGET_NODE_LIST=(px2-sandbox-1 px2-sandbox-2)
 for i_vm in $(seq $N_VMS)
 do
