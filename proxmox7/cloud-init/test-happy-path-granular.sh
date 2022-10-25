@@ -1,6 +1,5 @@
 #!/bin/bash
 set -e
-set -a;source ./.env.example;set +a
 ./start-stop-vms.sh stop
 ./destroy-vms.sh
 ./destroy-template.sh
