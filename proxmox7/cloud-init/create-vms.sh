@@ -21,6 +21,7 @@ do
    printf "$msg: done\n"
    msg="${MSGCOLOR}Setting params${NOCOLOR}"
    printf "$msg...\n"
+   qm set ${vm_cur_id}  --agent enabled=1,fstrim_cloned_disks=1,type=virtio
    qm set ${vm_cur_id}  --ipconfig0 ip=${vm_cur_ip}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
    printf "$msg: done\n"
    target_node=${target_node_list[i_vm-1]}

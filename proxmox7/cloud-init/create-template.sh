@@ -17,7 +17,8 @@ printf "$main_msg...\n"
 msg="${MSGCOLOR}Creating VM${NOCOLOR}"
 printf "$msg...\n"
 # mtu=1 means use MTU of the host's bridge for the corresponding bridge
-qm create $Pz_VM_TEMPLATE_ID --memory $Pz_RAM --cores $Pz_VCPU  --name $Pz_VM_TEMPLATE_NAME --net0 virtio,bridge=$Pz_NET_BRIDGE,mtu=1 --pool $Pz_POOL_ID
+qm create $Pz_VM_TEMPLATE_ID --memory $Pz_RAM --cores $Pz_VCPU  \
+  --name $Pz_VM_TEMPLATE_NAME --net0 virtio,bridge=$Pz_NET_BRIDGE,mtu=1 --pool $Pz_POOL_ID
 printf "$msg: done\n"
 
 msg="${MSGCOLOR}Making a copy of the disk image \"${Pz_IMG_FILE_NAME}\"${NOCOLOR}"
@@ -61,6 +62,7 @@ msg="${MSGCOLOR}Setting various VM parameters${NOCOLOR}"
 printf "$msg...\n"
 qm set $Pz_VM_TEMPLATE_ID --ide2 $Pz_DATA_STORAGE_ID:cloudinit
 qm set $Pz_VM_TEMPLATE_ID --boot c --bootdisk scsi0
+qm set $Pz_VM_TEMPLATE_ID --agent enabled=1,fstrim_cloned_disks=1,type=virtio
 printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Setting CloudInit parameters${NOCOLOR}"

@@ -16,7 +16,9 @@ printf "$main_msg...\n"
 
 mkdir -p $Pz_CLOUD_INIT_IMAGE_DIR
 
-for dl_url in "${LINK_LIST[@]}"
+eval "link_list=$Pz_LINK_LIST"
+
+for dl_url in "${link_list[@]}"
 do
   msg="${MSGCOLOR}Downloading $dl_url${NOCOLOR}"
   printf "$msg...\n"
