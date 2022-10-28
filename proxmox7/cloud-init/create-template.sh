@@ -67,7 +67,6 @@ printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Setting CloudInit parameters${NOCOLOR}"
 printf "$msg...\n"
-qm set $Pz_VM_TEMPLATE_ID --nameserver $Pz_DNS
 qm set $Pz_VM_TEMPLATE_ID --ciuser $Pz_USER_NAME
 qm set $Pz_VM_TEMPLATE_ID --cipassword $Pz_USER_PW
 qm set $Pz_VM_TEMPLATE_ID --sshkey $Pz_USER_PUB_KEY_FILE_NAME

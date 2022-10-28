@@ -4,6 +4,7 @@ set -e
 MAIN_MSGCOLOR=`tput setaf 48`
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
+ERRCOLOR=`tput setaf 196`
 
 main_msg="${MAIN_MSGCOLOR}=======Create VMs${NOCOLOR}"
 printf "${main_msg}...\n"
@@ -14,15 +15,22 @@ for i_vm in $(seq $Pz_N_VMS)
 do
    vm_cur_id=${Pz_VM_ID_PREFIX}${i_vm}
    vm_cur_name=${Pz_VM_NAME_PREFIX}${i_vm}
-   vm_cur_ip=${Pz_VM_IP_PREFIX}${i_vm}
-   msg="${MSGCOLOR}Creating VM $i_vm with ID=${vm_cur_id} and NAME=${vm_cur_name} and IP=${vm_cur_ip}${NOCOLOR}"
-   printf "$msg..\n"
+   msg="${MSGCOLOR}Creating VM $i_vm with ID=${vm_cur_id} and NAME=${vm_cur_name}${NOCOLOR}"
+   printf "$msg...\n"
    qm clone $Pz_VM_TEMPLATE_ID ${vm_cur_id} --name ${vm_cur_name} --pool $Pz_POOL_ID $Pz_CLONE_FLAG
    printf "$msg: done\n"
    msg="${MSGCOLOR}Setting params${NOCOLOR}"
    printf "$msg...\n"
    qm set ${vm_cur_id}  --agent enabled=1,fstrim_cloned_disks=1,type=virtio
-   qm set ${vm_cur_id}  --ipconfig0 ip=${vm_cur_ip}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
+   if [ $Pz_IP_MODE == 'static' ]; then
+       qm set ${vm_cur_id}  --ipconfig0 ip=${Pz_VM_IP_PREFIX}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
+       qm set $vm_cur_id --nameserver $Pz_DNS
+   elif [ $Pz_IP_MODE == 'dhcp' ]; then
+       qm set ${vm_cur_id}  --ipconfig0 ip=dhcp
+   else
+       printf "${ERRCOLOR}Unknown IP MODE = $Pz_IP_MODE\n${NOCOLOR}"
+       exit 1
+   fi
    printf "$msg: done\n"
    target_node=${target_node_list[i_vm-1]}
    if [ `hostname` != ${target_node} ]; then
