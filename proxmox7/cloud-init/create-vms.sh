@@ -23,7 +23,7 @@ do
    printf "$msg...\n"
    qm set ${vm_cur_id}  --agent enabled=1,fstrim_cloned_disks=1,type=virtio
    if [ $Pz_IP_MODE == 'static' ]; then
-       qm set ${vm_cur_id}  --ipconfig0 ip=${Pz_VM_IP_PREFIX}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
+       qm set ${vm_cur_id}  --ipconfig0 ip=${Pz_VM_IP_PREFIX}${i_vm}/${Pz_IP_MASK_N_BITS},gw=${Pz_GATEWAY}
        qm set $vm_cur_id --nameserver $Pz_DNS
    elif [ $Pz_IP_MODE == 'dhcp' ]; then
        qm set ${vm_cur_id}  --ipconfig0 ip=dhcp
