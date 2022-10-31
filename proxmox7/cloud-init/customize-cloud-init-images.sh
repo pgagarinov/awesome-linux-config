@@ -30,7 +30,7 @@ do
   custom_file="${orig_file%.orig}.custom"
   custom_file_tmp=${custom_file}.tmp
   cp -- "$orig_file" "$custom_file_tmp"
-  virt-customize -a $custom_file_tmp --update  --install $Pz_CLOUD_INIT_INSTALL_PKG_LIST && mv $custom_file_tmp $custom_file
+  virt-customize -a $custom_file_tmp --install $Pz_CLOUD_INIT_INSTALL_PKG_LIST && mv $custom_file_tmp $custom_file
   if [[ -e "$custom_file_tmp" ]]
   then
     rm $custom_file_tmp
