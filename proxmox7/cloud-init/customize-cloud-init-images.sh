@@ -13,8 +13,8 @@ NOCOLOR=`tput sgr0`
 ERRCOLOR=`tput setaf 196`
 #
 REQUIRED_PKG="libguestfs-tools"
-PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
-if [ "" = "$PKG_OK" ]; then
+PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep -c "install ok installed" || true)
+if [ "1" != "$PKG_OK" ]; then
   msg="${MSGCOLOR}Setting up $REQUIRED_PKG${NOCOLOR}"
   printf "$msg...\n"
   apt-get --yes install $REQUIRED_PKG
