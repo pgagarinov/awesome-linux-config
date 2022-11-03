@@ -48,7 +48,7 @@ Currently the following Linux distros are given a special customization treat:
 - Ubuntu Jammy. 
   - Image prefix (used as an indicator of an image file being related to the specific distribution): "jammy"
   - Script name (not intended to be used directly): "_customize_ubuntu_jammy.sh"
-- <TBA>
+- TO BE ADDED 
 
 Prior to customizing the images the script check for the presence of `libguestfs-tools` package on 
 on the proxmox node and if the package is missing - it is installed automatically.
