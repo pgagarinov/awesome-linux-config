@@ -16,15 +16,42 @@
  - Export environment variables from your env file: `set -a; source ./.env; set +a`
 
 ## 5. Download cloud init images
+The images are downloaded into a folder defined by "Pz_CLOUD_INIT_IMAGE_DIR" environment variable.
 - `./download-cloud-init-images.sh` 
 All downloaded images are given ".orig" extension. Please make sure to use that extension when referring 
-to the image file via `Pz_IMG_FILE_NAME` env variable.
+to the image file via `Pz_IMG_FILE_NAME` env variable (this variable is used by `./create-template.sh` script).
 
 ## 6. (Optional) Customize cloud init images.
 - `./customize-cloud-init-images.sh`
-This script uses *libguestfs* toolkit (namely https://libguestfs.org/virt-customize.1.html) to inject packages into
-the disk image without actually creating/starting a virtual machine. The presence of `libguestfs-tools` package on 
-on the proxmox node is checked by the script and if the package is missing - it is installed automatically.
+This script uses *libguestfs* toolkit (namely https://libguestfs.org/virt-customize.1.html) to 
+- inject extra packages (like "qemu-guest-agent" e.g.) to
+- remove some packages and services (like "snap" e.g.) from
+each disk images in the directory controlled by "Pz_CLOUD_INIT_IMAGE_DIR" environment variable 
+without actually creating/starting a virtual machine. Only the images with ".orig" extension 
+are customized. The customized images are given ".custom" extension
+while preserving the original image files.
+
+The list of extra packages to be installed into cloud images is regulated by 
+"Pz_CLOUD_INIT_INSTALL_PKG_LIST" environment variable that is expected to contain 
+a comma-separated list of package names. Please note that all the packages defined by this
+variable are expected to have the same names across all Linux distributions images for which
+are found in "Pz_CLOUD_INIT_IMAGE_DIR". If this is not the case for some package - please consider
+writing a special script for that specific Linux distro and integrating it into the top-level
+"customize-cloud-init-images.sh" script (see below).
+
+### Special scripts for specific Linux distros
+Please note that some images are customized
+in a special manner by "_customize_<distro-name>.sh" scripts that are not intended to be called directly.
+Such an approach allows to deal with packages (and the ways of installing/removing/configuring them)
+that are specific to some distributions (or at least named specifically).
+Currently the following Linux distros are given a special customization treat:
+- Ubuntu Jammy. 
+  - Image prefix (used as an indicator of an image file being related to the specific distribution): "jammy"
+  - Script name (not intended to be used directly): "_customize_ubuntu_jammy.sh"
+- <TBA>
+
+Prior to customizing the images the script check for the presence of `libguestfs-tools` package on 
+on the proxmox node and if the package is missing - it is installed automatically.
 
 ## 7. Create VM template
 - `./create-template.sh`
