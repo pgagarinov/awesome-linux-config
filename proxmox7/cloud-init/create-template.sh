@@ -23,15 +23,15 @@ printf "$msg: done\n"
 
 msg="${MSGCOLOR}Making a copy of the disk image \"${Pz_IMG_FILE_NAME}\"${NOCOLOR}"
 printf "$msg...\n"
-modified_img_file_name=${Pz_IMG_FILE_NAME}.mod
-cp $Pz_IMG_FILE_NAME $modified_img_file_name
+modified_img_file_name="${Pz_IMG_FILE_NAME}.mod"
+cp "$Pz_IMG_FILE_NAME" "$modified_img_file_name"
 printf "$msg: done\n"
 #
 if [ ! -z "$Pz_DISK_SIZE_INCREASE" ]
 then
   msg="${MSGCOLOR}Resizing the disk image \"${modified_img_file_name}\" by $Pz_DISK_SIZE_INCREASE${NOCOLOR}"
   printf "$msg...\n"
-  qemu-img resize $modified_img_file_name $Pz_DISK_SIZE_INCREASE
+  qemu-img resize "$modified_img_file_name" $Pz_DISK_SIZE_INCREASE
   printf "$msg: done\n"
 fi
 #
@@ -50,7 +50,7 @@ fi
 printf "${MSGCOLOR}Using DISK_FORMAT=$Pz_DISK_FORMAT${NOCOLOR}\n"
 msg="${MSGCOLOR}Adding suffix $import_disk_cmd_suffix to qm import command${NOCOLOR}"
 printf "$msg...\n"
-qm importdisk $Pz_VM_TEMPLATE_ID $modified_img_file_name $Pz_DATA_STORAGE_ID $import_disk_cmd_suffix
+qm importdisk $Pz_VM_TEMPLATE_ID "$modified_img_file_name" $Pz_DATA_STORAGE_ID $import_disk_cmd_suffix
 printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Attaching disk to VM using disk_path=${after_import_disk_path}${NOCOLOR}"
