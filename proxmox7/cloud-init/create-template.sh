@@ -10,6 +10,8 @@ set -e
 MAIN_MSGCOLOR=`tput setaf 48`
 MSGCOLOR=`tput setaf 3`
 NOCOLOR=`tput sgr0`
+ERRCOLOR=`tput setaf 196`
+WARNCOLOR=`tput setaf 11`
 
 main_msg="${MAIN_MSGCOLOR}======Creating VM template${NOCOLOR}"
 printf "$main_msg...\n"
@@ -42,7 +44,7 @@ elif [ "$Pz_DISK_FORMAT" == 'qcow2' ]; then
   import_disk_cmd_suffix='--format qcow2'
   after_import_disk_path="$Pz_DATA_STORAGE_ID:$Pz_VM_TEMPLATE_ID/vm-$Pz_VM_TEMPLATE_ID-disk-0.qcow2"
 else
-  printf "${MSGCOLOR}Format $Pz_DISK_FORMAT is unsupported${NOCOLOR}"
+  printf "${ERRCOLOR}Format $Pz_DISK_FORMAT is unsupported${NOCOLOR}"
   exit 1
 fi
 
@@ -68,8 +70,20 @@ printf "$msg: done\n"
 msg="${MSGCOLOR}Setting CloudInit parameters${NOCOLOR}"
 printf "$msg...\n"
 qm set $Pz_VM_TEMPLATE_ID --ciuser $Pz_USER_NAME
-qm set $Pz_VM_TEMPLATE_ID --cipassword $Pz_USER_PW
-qm set $Pz_VM_TEMPLATE_ID --sshkey $Pz_USER_PUB_KEY_FILE_NAME
+
+if [ ! -z "$Pz_USER_PW" ]
+then
+  qm set $Pz_VM_TEMPLATE_ID --cipassword $Pz_USER_PW
+else
+  printf "${WARNCOLOR}WARNING: Setting password: not defined, skipped${NOCOLOR}\n"
+fi
+
+if [ ! -z "$Pz_USER_PUB_KEY_FILE_NAME" ]
+then
+  qm set $Pz_VM_TEMPLATE_ID --sshkey $Pz_USER_PUB_KEY_FILE_NAME
+else
+  printf "${WARNCOLOR}WARNING: Setting SSH key: not defined, skipped${NOCOLOR}\n"
+fi
 printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Converting VM to a template${NOCOLOR}"
