@@ -57,7 +57,7 @@ printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Attaching disk to VM using disk_path=${after_import_disk_path}${NOCOLOR}"
 printf "$msg...\n"
-qm set $Pz_VM_TEMPLATE_ID --scsihw virtio-scsi-pci --virtio0 $after_import_disk_path
+qm set $Pz_VM_TEMPLATE_ID --scsihw virtio-scsi-pci --virtio0 $after_import_disk_path,discard=on
 printf "$msg: done\n"
 #
 msg="${MSGCOLOR}Setting various VM parameters${NOCOLOR}"
