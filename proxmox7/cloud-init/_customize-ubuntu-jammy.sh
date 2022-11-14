@@ -9,7 +9,7 @@ set -e
 
 msg="===Installing packages"
 printf "$msg...\n"
-virt-customize -a $1 --install nala,qemu-guest-agent
+virt-customize -a $1 --install nala,qemu-guest-agent,iperf3
 printf "$msg: done\n"
 
 msg="===Choosing the fastest mirrors"

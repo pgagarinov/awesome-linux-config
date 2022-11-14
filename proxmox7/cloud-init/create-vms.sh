@@ -34,7 +34,7 @@ do
    printf "$msg: done\n"
    target_node=${target_node_list[i_vm-1]}
    if [ `hostname` != ${target_node} ]; then
-       msg="${MSGCOLOR}Migrating VM $i_vm with ID=${vm_cur_id} to node ${target_node}{NOCOLOR}"
+       msg="${MSGCOLOR}Migrating VM $i_vm with ID=${vm_cur_id} to node ${target_node}${NOCOLOR}"
        printf "$msg...\n"
        qm migrate ${vm_cur_id} ${target_node} --online --with-local-disks
        printf "$msg: done\n"
