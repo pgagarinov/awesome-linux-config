@@ -22,6 +22,12 @@ printf "$msg...\n"
 virt-customize -a $1 --run-command 'bash -c "$(curl -fsSL https://raw.githubusercontent.com/Alliedium/remove-snap/main/remove-snap.sh)"'
 printf "$msg: done\n"
 
+
+msg="===Making sure Message of the day is not displayed on SSH login"
+printf "$msg...\n"
+virt-customize -a $1 --run-command 'chmod -x /etc/update-motd.d/*'
+printf "$msg: done\n"
+
 msg="===Cleaning via Nala"
 printf "$msg...\n"
 virt-customize -a $1 --run-command 'nala clean'
