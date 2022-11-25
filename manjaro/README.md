@@ -6,7 +6,7 @@
     sudo reboot now
 	```
 ## 2. Clone this repository
-	```bash
+	```
 	git clone https://github.com/Alliedium/awesome-linux-config.git
 	```
 
@@ -14,7 +14,7 @@
 
 ### For server
 
-	```bash
+	```
 	cd awesome-linux-config/manjaro/basic/
     ./install_4server_all.sh
     # make sure the script above runs till the end!!!
@@ -22,7 +22,7 @@
 	```
 ### For workstation
 
-	```bash
+	```
 	cd awesome-linux-config/manjaro/basic/
     ./install_all.sh
     # make sure the script above runs till the end!!!
@@ -31,7 +31,7 @@
 	
 
 ## 4. Change your shell to zsh and login/logout
-	```bash
+	```
 	cd awesome-linux-config/manjaro/basic/sysadmin
     ./change_to_zsh.sh
     # login and logout
@@ -39,7 +39,7 @@
 ## 5. Install user-specific scripts
 
 ### For server
-	```bash
+	```
 	cd awesome-linux-config/manjaro/basic/user
     ./install_server_stuff_user.sh
     # make sure the script above runs till the end!!!
@@ -48,7 +48,7 @@
 
 ### For workstation
 
-	```bash
+	```
 	cd awesome-linux-config/manjaro/basic/user
     ./install_all_user.sh
     # make sure the script above runs till the end!!!
