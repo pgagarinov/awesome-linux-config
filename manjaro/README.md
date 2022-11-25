@@ -5,8 +5,9 @@
 sudo pacman -Syyuu
 sudo reboot now
 ```
-## 2. Clone this repository
+## 2. Install git and clone this repository
 ```
+sudo pacman -S git --noconfirm
 git clone https://github.com/Alliedium/awesome-linux-config.git
 ```
 
