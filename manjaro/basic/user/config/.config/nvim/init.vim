@@ -13,6 +13,7 @@ call plug#begin()
 
 " Load plugins
 " VIM enhancements
+Plug 'jvirtanen/vim-hcl'
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
@@ -44,6 +45,8 @@ Plug 'plasticboy/vim-markdown'
 Plug 'chriskempson/base16-vim'
 "Plug 'joshdick/onedark.vim'
 "Plug 'tomasiser/vim-code-dark'
+Plug 'nvim-treesitter/nvim-treesitter'
+
 call plug#end()
 
 if has('nvim')
@@ -108,11 +111,11 @@ autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 
 " from http://sheerun.net/2014/03/21/how-to-boost-your-vim-productivity/
 if executable('ag')
-	set grepprg=ag\ --nogroup\ --nocolor
+        set grepprg=ag\ --nogroup\ --nocolor
 endif
 if executable('rg')
-	set grepprg=rg\ --no-heading\ --vimgrep
-	set grepformat=%f:%l:%c:%m
+        set grepprg=rg\ --no-heading\ --vimgrep
+        set grepformat=%f:%l:%c:%m
 endif
 
 " Javascript
@@ -387,7 +390,7 @@ function! s:show_documentation()
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
+" autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -472,5 +475,6 @@ autocmd Filetype html,xml,xsl,php source ~/.config/nvim/scripts/closetag.vim
 
 " nvim
 if has('nvim')
-	runtime! plugin/python_setup.vim
+        runtime! plugin/python_setup.vim
 endif
+
