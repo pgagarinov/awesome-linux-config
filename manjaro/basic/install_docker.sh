@@ -9,4 +9,4 @@ group=docker
 if [ $(id -gn) != $group ]; then
  exec sg $group "$0 $*"
 fi
-sudo sh -c 'echo "{ \"features\" : { \"buildkit\": true} }" > /etc/docker/daemon.json'i
+sudo sh -c 'echo "{ \"features\" : { \"buildkit\": true} }" > /etc/docker/daemon.json'
