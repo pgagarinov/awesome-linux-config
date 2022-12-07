@@ -19,8 +19,13 @@ printf "$main_msg...\n"
 msg="${MSGCOLOR}Creating VM${NOCOLOR}"
 printf "$msg...\n"
 # mtu=1 means use MTU of the host's bridge for the corresponding bridge
-qm create $Pz_VM_TEMPLATE_ID --memory $Pz_RAM --cores $Pz_VCPU  \
+qm create $Pz_VM_TEMPLATE_ID --memory $Pz_RAM --cores $Pz_VCPU \
   --name $Pz_VM_TEMPLATE_NAME --net0 virtio,bridge=$Pz_NET_BRIDGE,mtu=1 --pool $Pz_POOL_ID
+
+if [ ! -z "$Pz_VCPU_TYPE" ]
+then
+  qm set $Pz_VM_TEMPLATE_ID --cpu cputype=$Pz_VCPU_TYPE
+fi
 printf "$msg: done\n"
 
 msg="${MSGCOLOR}Making a copy of the disk image \"${Pz_IMG_FILE_NAME}\"${NOCOLOR}"
