@@ -4,6 +4,7 @@ sudo pacman -S --noconfirm --needed kubectl
 yay -S --noconfirm --needed krew-bin
 yay -S --noconfirm --needed rancher-k3d-bin
 yay -S --noconfirm --needed k9s
+yay -S --noconfirm --needed devspace-bin
 kubectl krew install ns ctx
 ## Check that minikube works as expected
 
