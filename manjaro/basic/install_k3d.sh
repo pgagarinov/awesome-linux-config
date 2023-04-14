@@ -5,6 +5,7 @@ yay -S --noconfirm --needed krew-bin
 yay -S --noconfirm --needed rancher-k3d-bin
 yay -S --noconfirm --needed k9s
 yay -S --noconfirm --needed devspace-bin vcluster kubeseal
+yay -S --noconfirm --needed ansible molecule molecule-plugins
 kubectl krew install ns ctx
 ## Check that minikube works as expected
 
