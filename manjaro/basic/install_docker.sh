@@ -10,4 +10,5 @@ group=docker
 if [ $(id -gn) != $group ]; then
  exec sg $group "$0 $*"
 fi
+sudo mkdir -p /etc/docker
 sudo sh -c 'echo "{ \"features\" : { \"buildkit\": true} }" > /etc/docker/daemon.json'
