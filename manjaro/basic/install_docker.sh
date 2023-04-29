@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 sudo pacman -S --noconfirm --needed docker docker-buildx
-docker install buildx
+docker buildx install
 sudo systemctl enable docker --now
 sudo usermod -aG docker $USER
 
