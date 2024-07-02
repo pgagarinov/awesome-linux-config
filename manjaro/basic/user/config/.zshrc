@@ -152,7 +152,7 @@ fi
 alias sudo='sudo ' #this allows to use `sudo ll`
 
 TREE_IGNORE="cache|log|logs|node_modules|vendor"
-if type lsd %>/dev/null > /dev/null; then
+if type lsd >/dev/null 2>&1; then
  alias ls=' lsd --group-directories-first'
  alias ll=' ls --git -l'
  alias lt=' ls --tree -D -L 2 -I ${TREE_IGNORE}'
