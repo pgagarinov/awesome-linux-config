@@ -13,3 +13,7 @@ see ./change_to_zsh.sh script
 
 ## 5. Enable parallel compression for AUR packages
 https://wiki.archlinux.org/index.php/Makepkg#Utilizing_multiple_cores_on_compression
+
+## 6. Enable parallel downloads for pacman
+Uncomment 'ParallelDownloads' line in `/etc/pacman.conf` and set
+`ParallelDownloads=5`
